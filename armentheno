@@ -1,0 +1,3583 @@
+--- 0
+-e.import
+[{]}
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer.sln
+@@ -0,0 +1,20 @@
++﻿
++Microsoft Visual Studio Solution File, Format Version 10.00
++# Visual C# Express 2008
++Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripleA Map Resizer", "TripleA Map Resizer\TripleA Map Resizer.csproj", "{477468E0-61B7-47C1-98A4-59FE6EA53E5A}"
++EndProject
++Global
++	GlobalSection(SolutionConfigurationPlatforms) = preSolution
++		Debug|Any CPU = Debug|Any CPU
++		Release|Any CPU = Release|Any CPU
++	EndGlobalSection
++	GlobalSection(ProjectConfigurationPlatforms) = postSolution
++		{477468E0-61B7-47C1-98A4-59FE6EA53E5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
++		{477468E0-61B7-47C1-98A4-59FE6EA53E5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
++		{477468E0-61B7-47C1-98A4-59FE6EA53E5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
++		{477468E0-61B7-47C1-98A4-59FE6EA53E5A}.Release|Any CPU.Build.0 = Release|Any CPU
++	EndGlobalSection
++	GlobalSection(SolutionProperties) = preSolution
++		HideSolutionNode = FALSE
++	EndGlobalSection
++EndGlobal
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer.suo
+Binary file was added.
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/ExceptionViewer.Designer.csDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/ExceptionViewer.Designer.cs
+@@ -0,0 +1,119 @@
++namespace TripleA_Map_Resizer
++{
++    partial class ExceptionViewer
++    {
++        /// <summary>
++        /// Required designer variable.
++        /// </summary>
++        private System.ComponentModel.IContainer components = null;
++
++        /// <summary>
++        /// Clean up any resources being used.
++        /// </summary>
++        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
++        protected override void Dispose(bool disposing)
++        {
++            if (disposing && (components != null))
++            {
++                components.Dispose();
++            }
++            base.Dispose(disposing);
++        }
++
++        #region Windows Form Designer generated code
++
++        /// <summary>
++        /// Required method for Designer support - do not modify
++        /// the contents of this method with the code editor.
++        /// </summary>
++        private void InitializeComponent()
++        {
++            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExceptionViewer));
++            this.label1 = new System.Windows.Forms.Label();
++            this.exceptionInformationTB = new System.Windows.Forms.TextBox();
++            this.ContinueRunningBTN = new System.Windows.Forms.Button();
++            this.QuitApplicationBTN = new System.Windows.Forms.Button();
++            this.copyIntoClipboardBTN = new System.Windows.Forms.Button();
++            this.SuspendLayout();
++            // 
++            // label1
++            // 
++            this.label1.Font = new System.Drawing.Font("Arial", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
++            this.label1.Location = new System.Drawing.Point(2, 5);
++            this.label1.Name = "label1";
++            this.label1.Size = new System.Drawing.Size(433, 37);
++            this.label1.TabIndex = 0;
++            this.label1.Text = "An unhandled exeption has occured in the program. The following information can b" +
++                "e used to find the cause of the error:";
++            // 
++            // exceptionInformationTB
++            // 
++            this.exceptionInformationTB.Location = new System.Drawing.Point(5, 45);
++            this.exceptionInformationTB.Multiline = true;
++            this.exceptionInformationTB.Name = "exceptionInformationTB";
++            this.exceptionInformationTB.ReadOnly = true;
++            this.exceptionInformationTB.Size = new System.Drawing.Size(430, 193);
++            this.exceptionInformationTB.TabIndex = 1;
++            // 
++            // ContinueRunningBTN
++            // 
++            this.ContinueRunningBTN.Location = new System.Drawing.Point(150, 242);
++            this.ContinueRunningBTN.Name = "ContinueRunningBTN";
++            this.ContinueRunningBTN.Size = new System.Drawing.Size(140, 38);
++            this.ContinueRunningBTN.TabIndex = 2;
++            this.ContinueRunningBTN.Text = "Continue Running";
++            this.ContinueRunningBTN.UseVisualStyleBackColor = true;
++            this.ContinueRunningBTN.Click += new System.EventHandler(this.ContinueRunningBTN_Click);
++            // 
++            // QuitApplicationBTN
++            // 
++            this.QuitApplicationBTN.Location = new System.Drawing.Point(294, 242);
++            this.QuitApplicationBTN.Name = "QuitApplicationBTN";
++            this.QuitApplicationBTN.Size = new System.Drawing.Size(140, 38);
++            this.QuitApplicationBTN.TabIndex = 2;
++            this.QuitApplicationBTN.Text = "Quit Application";
++            this.QuitApplicationBTN.UseVisualStyleBackColor = true;
++            this.QuitApplicationBTN.Click += new System.EventHandler(this.QuitApplicationBTN_Click);
++            // 
++            // copyIntoClipboardBTN
++            // 
++            this.copyIntoClipboardBTN.Location = new System.Drawing.Point(5, 242);
++            this.copyIntoClipboardBTN.Name = "copyIntoClipboardBTN";
++            this.copyIntoClipboardBTN.Size = new System.Drawing.Size(141, 38);
++            this.copyIntoClipboardBTN.TabIndex = 2;
++            this.copyIntoClipboardBTN.Text = "Copy Exception Information Into Clipboard";
++            this.copyIntoClipboardBTN.UseVisualStyleBackColor = true;
++            this.copyIntoClipboardBTN.Click += new System.EventHandler(this.copyIntoClipboardBTN_Click);
++            // 
++            // ExceptionViewer
++            // 
++            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
++            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
++            this.ClientSize = new System.Drawing.Size(439, 283);
++            this.Controls.Add(this.copyIntoClipboardBTN);
++            this.Controls.Add(this.QuitApplicationBTN);
++            this.Controls.Add(this.ContinueRunningBTN);
++            this.Controls.Add(this.exceptionInformationTB);
++            this.Controls.Add(this.label1);
++            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
++            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
++            this.Name = "ExceptionViewer";
++            this.MaximizeBox = false;
++            this.MinimizeBox = false;
++            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
++            this.Text = "TripleA Map Creator Exception Viewer";
++            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ExceptionViewer_FormClosing);
++            this.ResumeLayout(false);
++            this.PerformLayout();
++
++        }
++
++        #endregion
++
++        private System.Windows.Forms.Label label1;
++        private System.Windows.Forms.TextBox exceptionInformationTB;
++        private System.Windows.Forms.Button ContinueRunningBTN;
++        private System.Windows.Forms.Button QuitApplicationBTN;
++        private System.Windows.Forms.Button copyIntoClipboardBTN;
++    }
++}
+\ No newline at end of file
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/ExceptionViewer.csDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/ExceptionViewer.cs
+@@ -0,0 +1,57 @@
++﻿using System;
++using System.Collections.Generic;
++using System.ComponentModel;
++using System.Data;
++using System.Drawing;
++using System.Text;
++using System.Windows.Forms;
++
++namespace TripleA_Map_Resizer
++{
++    public partial class ExceptionViewer : Form
++    {
++        public ExceptionViewer()
++        {
++            InitializeComponent();
++        }
++        public Main main = null;
++        public void ShowInformationAboutException(Exception ex, bool allowContinue)
++        {
++            exceptionInformationTB.Text = String.Concat("Base Exception: \r\n\r\n", ex.GetBaseException().GetType().FullName, ": ", ex.GetBaseException().Message, "\r\n", ex.GetBaseException().StackTrace, "\r\n\r\nComplete Exception:\r\n\r\n", ex.GetType().FullName, ": ", ex.Message, "\r\n", ex.StackTrace);
++            ContinueRunningBTN.Enabled = allowContinue;
++            this.ShowDialog();
++        }
++        public void ShowInformationAboutException(Exception ex, bool allowContinue, IWin32Window parent)
++        {
++            exceptionInformationTB.Text = String.Concat("Base Exception: \r\n\r\n", ex.GetBaseException().GetType().FullName, ": ", ex.GetBaseException().Message, "\r\n", ex.GetBaseException().StackTrace, "\r\n\r\nComplete Exception:\r\n\r\n", ex.GetType().FullName, ": ", ex.Message, "\r\n", ex.StackTrace);
++            ContinueRunningBTN.Enabled = allowContinue;
++            this.ShowDialog(parent);
++        }
++
++        private void ContinueRunningBTN_Click(object sender, EventArgs e)
++        {
++            this.Hide();
++        }
++
++        private void QuitApplicationBTN_Click(object sender, EventArgs e)
++        {
++            Environment.Exit(0);
++        }
++        private void copyIntoClipboardBTN_Click(object sender, EventArgs e)
++        {
++            try
++            {
++                Clipboard.SetText(exceptionInformationTB.Text);
++            }
++            catch
++            {
++                main.Invoke(Delegate.CreateDelegate(typeof(Main.setClipboardTextDel), main, "SetClipboardText"), new object[] { exceptionInformationTB.Text });
++            }
++        }
++
++        private void ExceptionViewer_FormClosing(object sender, FormClosingEventArgs e)
++        {
++            e.Cancel = true;
++        }
++    }
++}
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/ExceptionViewer.resxDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/ExceptionViewer.resx
+@@ -0,0 +1,163 @@
++<?xml version="1.0" encoding="utf-8"?>
++<root>
++  <!-- 
++    Microsoft ResX Schema 
++    
++    Version 2.0
++    
++    The primary goals of this format is to allow a simple XML format 
++    that is mostly human readable. The generation and parsing of the 
++    various data types are done through the TypeConverter classes 
++    associated with the data types.
++    
++    Example:
++    
++    ... ado.net/XML headers & schema ...
++    <resheader name="resmimetype">text/microsoft-resx</resheader>
++    <resheader name="version">2.0</resheader>
++    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
++    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
++    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
++    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
++    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
++        <value>[base64 mime encoded serialized .NET Framework object]</value>
++    </data>
++    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
++        <comment>This is a comment</comment>
++    </data>
++                
++    There are any number of "resheader" rows that contain simple 
++    name/value pairs.
++    
++    Each data row contains a name, and value. The row also contains a 
++    type or mimetype. Type corresponds to a .NET class that support 
++    text/value conversion through the TypeConverter architecture. 
++    Classes that don't support this are serialized and stored with the 
++    mimetype set.
++    
++    The mimetype is used for serialized objects, and tells the 
++    ResXResourceReader how to depersist the object. This is currently not 
++    extensible. For a given mimetype the value must be set accordingly:
++    
++    Note - application/x-microsoft.net.object.binary.base64 is the format 
++    that the ResXResourceWriter will generate, however the reader can 
++    read any of the formats listed below.
++    
++    mimetype: application/x-microsoft.net.object.binary.base64
++    value   : The object must be serialized with 
++            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
++            : and then encoded with base64 encoding.
++    
++    mimetype: application/x-microsoft.net.object.soap.base64
++    value   : The object must be serialized with 
++            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
++            : and then encoded with base64 encoding.
++
++    mimetype: application/x-microsoft.net.object.bytearray.base64
++    value   : The object must be serialized into a byte array 
++            : using a System.ComponentModel.TypeConverter
++            : and then encoded with base64 encoding.
++    -->
++  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
++    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
++    <xsd:element name="root" msdata:IsDataSet="true">
++      <xsd:complexType>
++        <xsd:choice maxOccurs="unbounded">
++          <xsd:element name="metadata">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" />
++              </xsd:sequence>
++              <xsd:attribute name="name" use="required" type="xsd:string" />
++              <xsd:attribute name="type" type="xsd:string" />
++              <xsd:attribute name="mimetype" type="xsd:string" />
++              <xsd:attribute ref="xml:space" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="assembly">
++            <xsd:complexType>
++              <xsd:attribute name="alias" type="xsd:string" />
++              <xsd:attribute name="name" type="xsd:string" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="data">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
++                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
++              </xsd:sequence>
++              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
++              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
++              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
++              <xsd:attribute ref="xml:space" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="resheader">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
++              </xsd:sequence>
++              <xsd:attribute name="name" type="xsd:string" use="required" />
++            </xsd:complexType>
++          </xsd:element>
++        </xsd:choice>
++      </xsd:complexType>
++    </xsd:element>
++  </xsd:schema>
++  <resheader name="resmimetype">
++    <value>text/microsoft-resx</value>
++  </resheader>
++  <resheader name="version">
++    <value>2.0</value>
++  </resheader>
++  <resheader name="reader">
++    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
++  </resheader>
++  <resheader name="writer">
++    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
++  </resheader>
++  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
++  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        AAABAAEAICAAAAwACACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAgAQAAAAAAAAAAAAAAAAAAAAA
++        AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAMDcwADwyqYAACBAAAAgYAAAIIAAACCgAAAg
++        wAAAIOAAAEAAAABAIAAAQEAAAEBgAABAgAAAQKAAAEDAAABA4AAAYAAAAGAgAABgQAAAYGAAAGCAAABg
++        oAAAYMAAAGDgAACAAAAAgCAAAIBAAACAYAAAgIAAAICgAACAwAAAgOAAAKAAAACgIAAAoEAAAKBgAACg
++        gAAAoKAAAKDAAACg4AAAwAAAAMAgAADAQAAAwGAAAMCAAADAoAAAwMAAAMDgAADgAAAA4CAAAOBAAADg
++        YAAA4IAAAOCgAADgwAAA4OAAQAAAAEAAIABAAEAAQABgAEAAgABAAKAAQADAAEAA4ABAIAAAQCAgAEAg
++        QABAIGAAQCCAAEAgoABAIMAAQCDgAEBAAABAQCAAQEBAAEBAYABAQIAAQECgAEBAwABAQOAAQGAAAEBg
++        IABAYEAAQGBgAEBggABAYKAAQGDAAEBg4ABAgAAAQIAgAECAQABAgGAAQICAAECAoABAgMAAQIDgAECg
++        AABAoCAAQKBAAECgYABAoIAAQKCgAECgwABAoOAAQMAAAEDAIABAwEAAQMBgAEDAgABAwKAAQMDAAEDA
++        4ABA4AAAQOAgAEDgQABA4GAAQOCAAEDgoABA4MAAQODgAIAAAACAACAAgABAAIAAYACAAIAAgACgAIAA
++        wACAAOAAgCAAAIAgIACAIEAAgCBgAIAggACAIKAAgCDAAIAg4ACAQAAAgEAgAIBAQACAQGAAgECAAIBA
++        oACAQMAAgEDgAIBgAACAYCAAgGBAAIBgYACAYIAAgGCgAIBgwACAYOAAgIAAAICAIACAgEAAgIBgAICA
++        gACAgKAAgIDAAICA4ACAoAAAgKAgAICgQACAoGAAgKCAAICgoACAoMAAgKDgAIDAAACAwCAAgMBAAIDA
++        YACAwIAAgMCgAIDAwACAwOAAgOAAAIDgIACA4EAAgOBgAIDggACA4KAAgODAAIDg4ADAAAAAwAAgAMAA
++        QADAAGAAwACAAMAAoADAAMAAwADgAMAgAADAICAAwCBAAMAgYADAIIAAwCCgAMAgwADAIOAAwEAAAMBA
++        IADAQEAAwEBgAMBAgADAQKAAwEDAAMBA4ADAYAAAwGAgAMBgQADAYGAAwGCAAMBgoADAYMAAwGDgAMCA
++        AADAgCAAwIBAAMCAYADAgIAAwICgAMCAwADAgOAAwKAAAMCgIADAoEAAwKBgAMCggADAoKAAwKDAAMCg
++        4ADAwAAAwMAgAMDAQADAwGAAwMCAAMDAoADw+/8ApKCgAICAgAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
++        AAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwACAgICAgICAgICAgICAgIA4ODg
++        4ODg4ODgAGRkAABkAAICAgICAgICAgICAgICAgDg4ODg4ODg4OAAZGQAAGQAAgICAgICAgICAgICAgIA
++        4ODg4ODg4ODgAABkZAAAZAACAgICAgICAgICAgICAODg4ODg4ODg4OAAZGRkAABkAAICAgICAgICAgIC
++        AgAA4ODg4ODg4ODg4ABkZGQAAGQAAgICAgICAgICAgIAAODg4ODg4ODg4ODgAABkZAAAZAAAAgICAgIC
++        AAAAAODg4ODg4ODg4ODg4ODgAGRkAABkZAACAgIAAADg4ODg4ODg4AAAAODg4ODg4OAAZGQAAGRkAAIC
++        AgDg4ODg4ODg4AAAAAICAODg4ODg4ABkZAAAZGQAAgIAAODg4ODgAAAAAAICAgIAAODg4ODgAGRkAABk
++        ZAACAgDg4ODgAAAAAgICAgICAgIA4ODg4OAAZGQAAGRkAAAAAODg4OAAAgICAgICAgICAgAAAODg4ABk
++        ZAAAZGQA4ODg4ODg4AACAgICAgICAgICAgIA4ODgAGRkAABkZADg4ODg4ODgAAAAAgICAgICAgICAgDg
++        4OAAZGQAAGRkAODg4ODg4ODg4AAAAAACAgICAgICAODg4ABkZAAAZGQA4ODgAAAAAODg4ODg4AAAAgIC
++        AgIA4ODgAGRkAABkZADg4OAAAgIAAODg4ODg4AAAAgICAADg4OAAZGQAAGRkAODg4AACAgIA4ODg4ODg
++        4AAAAgAA4ODg4ABkZAAAZGQA4ODgAAICAgIA4ODg4ODg4OAAAODg4ODgAGRkAABkZADg4OAAAAICAgDg
++        4ODg4ODg4ODg4ODg4OAAZGQAAGRkAODg4OAAAgICAODg4ODg4ODg4ODg4ODg4AAAZAAAZGQA4ODg4AAA
++        AAAA4ODg4AAAAAAAAOAAAAAA4ABkAABkZADg4ODg4ODg4ODg4OAAAAICAgIAAAACAgDgAGQAAGRkAODg
++        4ODg4ODg4ODg4AACAgICAgICAgICAgAAZAAAZGQAAODg4ODg4ODg4ODgAAICAgICAgICAgICAgBkAABk
++        ZGQA4ODg4ODg4ODg4OAAAgICAgICAgICAgICAGQAAGRkZADg4ODg4ODg4ODg4OAAAgICAgICAgICAgIA
++        ZAAAZGQAAODg4ODg4ODg4ODg4AAAAAAAAgICAgICAgBkAABkZADg4ODg4ODg4ODg4ODg4ODg4AAAAgIC
++        AgICAGQAAGRkAODg4ODg4ODg4ODg4ODg4ODg4OAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
++        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
++        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
++        AAAAAAAAAAAAAAAAAAAAAAAA
++</value>
++  </data>
++</root>
+\ No newline at end of file
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Main.Designer.csDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Main.Designer.cs
+@@ -0,0 +1,820 @@
++﻿namespace TripleA_Map_Resizer
++{
++    partial class Main
++    {
++        /// <summary>
++        /// Required designer variable.
++        /// </summary>
++        private System.ComponentModel.IContainer components = null;
++
++        /// <summary>
++        /// Clean up any resources being used.
++        /// </summary>
++        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
++        protected override void Dispose(bool disposing)
++        {
++            if (disposing && (components != null))
++            {
++                components.Dispose();
++            }
++            base.Dispose(disposing);
++        }
++
++        #region Windows Form Designer generated code
++
++        /// <summary>
++        /// Required method for Designer support - do not modify
++        /// the contents of this method with the code editor.
++        /// </summary>
++        private void InitializeComponent()
++        {
++            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
++            this.groupBox1 = new System.Windows.Forms.GroupBox();
++            this.browseButton15 = new System.Windows.Forms.Button();
++            this.browseButton14 = new System.Windows.Forms.Button();
++            this.browseButton13 = new System.Windows.Forms.Button();
++            this.browseButton12 = new System.Windows.Forms.Button();
++            this.browseButton11 = new System.Windows.Forms.Button();
++            this.browseButton10 = new System.Windows.Forms.Button();
++            this.browseButton9 = new System.Windows.Forms.Button();
++            this.browseButton8 = new System.Windows.Forms.Button();
++            this.browseButton7 = new System.Windows.Forms.Button();
++            this.browseButton5 = new System.Windows.Forms.Button();
++            this.browseButton4 = new System.Windows.Forms.Button();
++            this.browseButton3 = new System.Windows.Forms.Button();
++            this.browseButton2 = new System.Windows.Forms.Button();
++            this.browseButton1 = new System.Windows.Forms.Button();
++            this.KamikazePlacementFileTB = new System.Windows.Forms.TextBox();
++            this.capitolsFileTB = new System.Windows.Forms.TextBox();
++            this.decorationsFileTB = new System.Windows.Forms.TextBox();
++            this.ipcPlacementTB = new System.Windows.Forms.TextBox();
++            this.vcTB = new System.Windows.Forms.TextBox();
++            this.namePlacementFileTB = new System.Windows.Forms.TextBox();
++            this.placementFileTB = new System.Windows.Forms.TextBox();
++            this.imageFileTB = new System.Windows.Forms.TextBox();
++            this.reliefTilesFolderTB = new System.Windows.Forms.TextBox();
++            this.propertiesFileTB = new System.Windows.Forms.TextBox();
++            this.polygonsFileTB = new System.Windows.Forms.TextBox();
++            this.centersFileTB = new System.Windows.Forms.TextBox();
++            this.label14 = new System.Windows.Forms.Label();
++            this.baseTilesFolderTB = new System.Windows.Forms.TextBox();
++            this.label13 = new System.Windows.Forms.Label();
++            this.label12 = new System.Windows.Forms.Label();
++            this.label11 = new System.Windows.Forms.Label();
++            this.mapFolderTB = new System.Windows.Forms.TextBox();
++            this.label10 = new System.Windows.Forms.Label();
++            this.label7 = new System.Windows.Forms.Label();
++            this.label6 = new System.Windows.Forms.Label();
++            this.label9 = new System.Windows.Forms.Label();
++            this.label8 = new System.Windows.Forms.Label();
++            this.label5 = new System.Windows.Forms.Label();
++            this.label4 = new System.Windows.Forms.Label();
++            this.label3 = new System.Windows.Forms.Label();
++            this.label2 = new System.Windows.Forms.Label();
++            this.label1 = new System.Windows.Forms.Label();
++            this.previewResizedMapBTN = new System.Windows.Forms.Button();
++            this.resizeMapFilesBTN = new System.Windows.Forms.Button();
++            this.radioButton1 = new System.Windows.Forms.RadioButton();
++            this.radioButton2 = new System.Windows.Forms.RadioButton();
++            this.mapScaleUPDOWN = new System.Windows.Forms.NumericUpDown();
++            this.label15 = new System.Windows.Forms.Label();
++            this.mapSizeTB = new System.Windows.Forms.TextBox();
++            this.useImageSmoothing = new System.Windows.Forms.CheckBox();
++            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
++            this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
++            this.progressBar = new System.Windows.Forms.ToolStripProgressBar();
++            this.tabControl1 = new System.Windows.Forms.TabControl();
++            this.tabPage1 = new System.Windows.Forms.TabPage();
++            this.tabPage2 = new System.Windows.Forms.TabPage();
++            this.label16 = new System.Windows.Forms.Label();
++            this.previewShiftedMapButton = new System.Windows.Forms.Button();
++            this.shiftingAmountTextbox = new System.Windows.Forms.TextBox();
++            this.shiftMapFilesButton = new System.Windows.Forms.Button();
++            this.groupBox1.SuspendLayout();
++            ((System.ComponentModel.ISupportInitialize)(this.mapScaleUPDOWN)).BeginInit();
++            this.statusStrip1.SuspendLayout();
++            this.tabControl1.SuspendLayout();
++            this.tabPage1.SuspendLayout();
++            this.tabPage2.SuspendLayout();
++            this.SuspendLayout();
++            // 
++            // groupBox1
++            // 
++            this.groupBox1.Controls.Add(this.browseButton15);
++            this.groupBox1.Controls.Add(this.browseButton14);
++            this.groupBox1.Controls.Add(this.browseButton13);
++            this.groupBox1.Controls.Add(this.browseButton12);
++            this.groupBox1.Controls.Add(this.browseButton11);
++            this.groupBox1.Controls.Add(this.browseButton10);
++            this.groupBox1.Controls.Add(this.browseButton9);
++            this.groupBox1.Controls.Add(this.browseButton8);
++            this.groupBox1.Controls.Add(this.browseButton7);
++            this.groupBox1.Controls.Add(this.browseButton5);
++            this.groupBox1.Controls.Add(this.browseButton4);
++            this.groupBox1.Controls.Add(this.browseButton3);
++            this.groupBox1.Controls.Add(this.browseButton2);
++            this.groupBox1.Controls.Add(this.browseButton1);
++            this.groupBox1.Controls.Add(this.KamikazePlacementFileTB);
++            this.groupBox1.Controls.Add(this.capitolsFileTB);
++            this.groupBox1.Controls.Add(this.decorationsFileTB);
++            this.groupBox1.Controls.Add(this.ipcPlacementTB);
++            this.groupBox1.Controls.Add(this.vcTB);
++            this.groupBox1.Controls.Add(this.namePlacementFileTB);
++            this.groupBox1.Controls.Add(this.placementFileTB);
++            this.groupBox1.Controls.Add(this.imageFileTB);
++            this.groupBox1.Controls.Add(this.reliefTilesFolderTB);
++            this.groupBox1.Controls.Add(this.propertiesFileTB);
++            this.groupBox1.Controls.Add(this.polygonsFileTB);
++            this.groupBox1.Controls.Add(this.centersFileTB);
++            this.groupBox1.Controls.Add(this.label14);
++            this.groupBox1.Controls.Add(this.baseTilesFolderTB);
++            this.groupBox1.Controls.Add(this.label13);
++            this.groupBox1.Controls.Add(this.label12);
++            this.groupBox1.Controls.Add(this.label11);
++            this.groupBox1.Controls.Add(this.mapFolderTB);
++            this.groupBox1.Controls.Add(this.label10);
++            this.groupBox1.Controls.Add(this.label7);
++            this.groupBox1.Controls.Add(this.label6);
++            this.groupBox1.Controls.Add(this.label9);
++            this.groupBox1.Controls.Add(this.label8);
++            this.groupBox1.Controls.Add(this.label5);
++            this.groupBox1.Controls.Add(this.label4);
++            this.groupBox1.Controls.Add(this.label3);
++            this.groupBox1.Controls.Add(this.label2);
++            this.groupBox1.Controls.Add(this.label1);
++            this.groupBox1.Location = new System.Drawing.Point(6, 6);
++            this.groupBox1.Name = "groupBox1";
++            this.groupBox1.Size = new System.Drawing.Size(454, 364);
++            this.groupBox1.TabIndex = 0;
++            this.groupBox1.TabStop = false;
++            this.groupBox1.Text = "Map Information Files (* Required)";
++            // 
++            // browseButton15
++            // 
++            this.browseButton15.Location = new System.Drawing.Point(348, 334);
++            this.browseButton15.Name = "browseButton15";
++            this.browseButton15.Size = new System.Drawing.Size(75, 22);
++            this.browseButton15.TabIndex = 2;
++            this.browseButton15.Text = "Browse";
++            this.browseButton15.UseVisualStyleBackColor = true;
++            this.browseButton15.Click += new System.EventHandler(this.browseButton15_Click);
++            // 
++            // browseButton14
++            // 
++            this.browseButton14.Location = new System.Drawing.Point(348, 309);
++            this.browseButton14.Name = "browseButton14";
++            this.browseButton14.Size = new System.Drawing.Size(75, 22);
++            this.browseButton14.TabIndex = 2;
++            this.browseButton14.Text = "Browse";
++            this.browseButton14.UseVisualStyleBackColor = true;
++            this.browseButton14.Click += new System.EventHandler(this.browseButton14_Click);
++            // 
++            // browseButton13
++            // 
++            this.browseButton13.Location = new System.Drawing.Point(348, 284);
++            this.browseButton13.Name = "browseButton13";
++            this.browseButton13.Size = new System.Drawing.Size(75, 22);
++            this.browseButton13.TabIndex = 2;
++            this.browseButton13.Text = "Browse";
++            this.browseButton13.UseVisualStyleBackColor = true;
++            this.browseButton13.Click += new System.EventHandler(this.browseButton13_Click);
++            // 
++            // browseButton12
++            // 
++            this.browseButton12.Location = new System.Drawing.Point(348, 259);
++            this.browseButton12.Name = "browseButton12";
++            this.browseButton12.Size = new System.Drawing.Size(75, 22);
++            this.browseButton12.TabIndex = 2;
++            this.browseButton12.Text = "Browse";
++            this.browseButton12.UseVisualStyleBackColor = true;
++            this.browseButton12.Click += new System.EventHandler(this.browseButton12_Click);
++            // 
++            // browseButton11
++            // 
++            this.browseButton11.Location = new System.Drawing.Point(348, 234);
++            this.browseButton11.Name = "browseButton11";
++            this.browseButton11.Size = new System.Drawing.Size(75, 22);
++            this.browseButton11.TabIndex = 2;
++            this.browseButton11.Text = "Browse";
++            this.browseButton11.UseVisualStyleBackColor = true;
++            this.browseButton11.Click += new System.EventHandler(this.browseButton11_Click);
++            // 
++            // browseButton10
++            // 
++            this.browseButton10.Location = new System.Drawing.Point(348, 209);
++            this.browseButton10.Name = "browseButton10";
++            this.browseButton10.Size = new System.Drawing.Size(75, 22);
++            this.browseButton10.TabIndex = 2;
++            this.browseButton10.Text = "Browse";
++            this.browseButton10.UseVisualStyleBackColor = true;
++            this.browseButton10.Click += new System.EventHandler(this.browseButton10_Click);
++            // 
++            // browseButton9
++            // 
++            this.browseButton9.Location = new System.Drawing.Point(348, 184);
++            this.browseButton9.Name = "browseButton9";
++            this.browseButton9.Size = new System.Drawing.Size(75, 22);
++            this.browseButton9.TabIndex = 2;
++            this.browseButton9.Text = "Browse";
++            this.browseButton9.UseVisualStyleBackColor = true;
++            this.browseButton9.Click += new System.EventHandler(this.browseButton9_Click);
++            // 
++            // browseButton8
++            // 
++            this.browseButton8.Location = new System.Drawing.Point(348, 160);
++            this.browseButton8.Name = "browseButton8";
++            this.browseButton8.Size = new System.Drawing.Size(75, 22);
++            this.browseButton8.TabIndex = 2;
++            this.browseButton8.Text = "Browse";
++            this.browseButton8.UseVisualStyleBackColor = true;
++            this.browseButton8.Click += new System.EventHandler(this.browseButton8_Click);
++            // 
++            // browseButton7
++            // 
++            this.browseButton7.Location = new System.Drawing.Point(348, 135);
++            this.browseButton7.Name = "browseButton7";
++            this.browseButton7.Size = new System.Drawing.Size(75, 22);
++            this.browseButton7.TabIndex = 2;
++            this.browseButton7.Text = "Browse";
++            this.browseButton7.UseVisualStyleBackColor = true;
++            this.browseButton7.Click += new System.EventHandler(this.browseButton7_Click);
++            // 
++            // browseButton5
++            // 
++            this.browseButton5.Location = new System.Drawing.Point(348, 111);
++            this.browseButton5.Name = "browseButton5";
++            this.browseButton5.Size = new System.Drawing.Size(75, 22);
++            this.browseButton5.TabIndex = 2;
++            this.browseButton5.Text = "Browse";
++            this.browseButton5.UseVisualStyleBackColor = true;
++            this.browseButton5.Click += new System.EventHandler(this.browseButton5_Click);
++            // 
++            // browseButton4
++            // 
++            this.browseButton4.Location = new System.Drawing.Point(348, 87);
++            this.browseButton4.Name = "browseButton4";
++            this.browseButton4.Size = new System.Drawing.Size(75, 22);
++            this.browseButton4.TabIndex = 2;
++            this.browseButton4.Text = "Browse";
++            this.browseButton4.UseVisualStyleBackColor = true;
++            this.browseButton4.Click += new System.EventHandler(this.browseButton4_Click);
++            // 
++            // browseButton3
++            // 
++            this.browseButton3.Location = new System.Drawing.Point(348, 63);
++            this.browseButton3.Name = "browseButton3";
++            this.browseButton3.Size = new System.Drawing.Size(75, 22);
++            this.browseButton3.TabIndex = 2;
++            this.browseButton3.Text = "Browse";
++            this.browseButton3.UseVisualStyleBackColor = true;
++            this.browseButton3.Click += new System.EventHandler(this.browseButton3_Click);
++            // 
++            // browseButton2
++            // 
++            this.browseButton2.Location = new System.Drawing.Point(348, 39);
++            this.browseButton2.Name = "browseButton2";
++            this.browseButton2.Size = new System.Drawing.Size(75, 22);
++            this.browseButton2.TabIndex = 2;
++            this.browseButton2.Text = "Browse";
++            this.browseButton2.UseVisualStyleBackColor = true;
++            this.browseButton2.Click += new System.EventHandler(this.browseButton2_Click);
++            // 
++            // browseButton1
++            // 
++            this.browseButton1.Location = new System.Drawing.Point(348, 15);
++            this.browseButton1.Name = "browseButton1";
++            this.browseButton1.Size = new System.Drawing.Size(75, 22);
++            this.browseButton1.TabIndex = 2;
++            this.browseButton1.Text = "Browse";
++            this.browseButton1.UseVisualStyleBackColor = true;
++            this.browseButton1.Click += new System.EventHandler(this.browseButton1_Click);
++            // 
++            // KamikazePlacementFileTB
++            // 
++            this.KamikazePlacementFileTB.Location = new System.Drawing.Point(141, 335);
++            this.KamikazePlacementFileTB.Name = "KamikazePlacementFileTB";
++            this.KamikazePlacementFileTB.Size = new System.Drawing.Size(201, 20);
++            this.KamikazePlacementFileTB.TabIndex = 1;
++            // 
++            // capitolsFileTB
++            // 
++            this.capitolsFileTB.Location = new System.Drawing.Point(141, 310);
++            this.capitolsFileTB.Name = "capitolsFileTB";
++            this.capitolsFileTB.Size = new System.Drawing.Size(201, 20);
++            this.capitolsFileTB.TabIndex = 1;
++            // 
++            // decorationsFileTB
++            // 
++            this.decorationsFileTB.Location = new System.Drawing.Point(141, 285);
++            this.decorationsFileTB.Name = "decorationsFileTB";
++            this.decorationsFileTB.Size = new System.Drawing.Size(201, 20);
++            this.decorationsFileTB.TabIndex = 1;
++            // 
++            // ipcPlacementTB
++            // 
++            this.ipcPlacementTB.Location = new System.Drawing.Point(141, 260);
++            this.ipcPlacementTB.Name = "ipcPlacementTB";
++            this.ipcPlacementTB.Size = new System.Drawing.Size(201, 20);
++            this.ipcPlacementTB.TabIndex = 1;
++            // 
++            // vcTB
++            // 
++            this.vcTB.Location = new System.Drawing.Point(141, 235);
++            this.vcTB.Name = "vcTB";
++            this.vcTB.Size = new System.Drawing.Size(201, 20);
++            this.vcTB.TabIndex = 1;
++            // 
++            // namePlacementFileTB
++            // 
++            this.namePlacementFileTB.AcceptsReturn = true;
++            this.namePlacementFileTB.Location = new System.Drawing.Point(141, 210);
++            this.namePlacementFileTB.Name = "namePlacementFileTB";
++            this.namePlacementFileTB.Size = new System.Drawing.Size(201, 20);
++            this.namePlacementFileTB.TabIndex = 1;
++            // 
++            // placementFileTB
++            // 
++            this.placementFileTB.Location = new System.Drawing.Point(141, 185);
++            this.placementFileTB.Name = "placementFileTB";
++            this.placementFileTB.Size = new System.Drawing.Size(201, 20);
++            this.placementFileTB.TabIndex = 1;
++            // 
++            // imageFileTB
++            // 
++            this.imageFileTB.Location = new System.Drawing.Point(141, 161);
++            this.imageFileTB.Name = "imageFileTB";
++            this.imageFileTB.Size = new System.Drawing.Size(201, 20);
++            this.imageFileTB.TabIndex = 1;
++            // 
++            // reliefTilesFolderTB
++            // 
++            this.reliefTilesFolderTB.Location = new System.Drawing.Point(141, 136);
++            this.reliefTilesFolderTB.Name = "reliefTilesFolderTB";
++            this.reliefTilesFolderTB.Size = new System.Drawing.Size(201, 20);
++            this.reliefTilesFolderTB.TabIndex = 1;
++            // 
++            // propertiesFileTB
++            // 
++            this.propertiesFileTB.AcceptsTab = true;
++            this.propertiesFileTB.Location = new System.Drawing.Point(141, 112);
++            this.propertiesFileTB.Name = "propertiesFileTB";
++            this.propertiesFileTB.Size = new System.Drawing.Size(201, 20);
++            this.propertiesFileTB.TabIndex = 1;
++            // 
++            // polygonsFileTB
++            // 
++            this.polygonsFileTB.AcceptsReturn = true;
++            this.polygonsFileTB.Location = new System.Drawing.Point(141, 88);
++            this.polygonsFileTB.Name = "polygonsFileTB";
++            this.polygonsFileTB.Size = new System.Drawing.Size(201, 20);
++            this.polygonsFileTB.TabIndex = 1;
++            // 
++            // centersFileTB
++            // 
++            this.centersFileTB.Location = new System.Drawing.Point(141, 64);
++            this.centersFileTB.Name = "centersFileTB";
++            this.centersFileTB.Size = new System.Drawing.Size(201, 20);
++            this.centersFileTB.TabIndex = 1;
++            // 
++            // label14
++            // 
++            this.label14.AutoSize = true;
++            this.label14.Location = new System.Drawing.Point(3, 338);
++            this.label14.Name = "label14";
++            this.label14.Size = new System.Drawing.Size(134, 13);
++            this.label14.TabIndex = 0;
++            this.label14.Text = "  Kamikaze Placement File:";
++            // 
++            // baseTilesFolderTB
++            // 
++            this.baseTilesFolderTB.Location = new System.Drawing.Point(141, 40);
++            this.baseTilesFolderTB.Name = "baseTilesFolderTB";
++            this.baseTilesFolderTB.Size = new System.Drawing.Size(201, 20);
++            this.baseTilesFolderTB.TabIndex = 1;
++            this.baseTilesFolderTB.TextChanged += new System.EventHandler(this.baseTilesFolderTB_TextChanged);
++            // 
++            // label13
++            // 
++            this.label13.AutoSize = true;
++            this.label13.Location = new System.Drawing.Point(3, 313);
++            this.label13.Name = "label13";
++            this.label13.Size = new System.Drawing.Size(72, 13);
++            this.label13.TabIndex = 0;
++            this.label13.Text = "  Capitols File:";
++            // 
++            // label12
++            // 
++            this.label12.AutoSize = true;
++            this.label12.Location = new System.Drawing.Point(3, 288);
++            this.label12.Name = "label12";
++            this.label12.Size = new System.Drawing.Size(92, 13);
++            this.label12.TabIndex = 0;
++            this.label12.Text = "  Decorations File:";
++            // 
++            // label11
++            // 
++            this.label11.AutoSize = true;
++            this.label11.Location = new System.Drawing.Point(3, 263);
++            this.label11.Name = "label11";
++            this.label11.Size = new System.Drawing.Size(105, 13);
++            this.label11.TabIndex = 0;
++            this.label11.Text = "  IPC Placement File:";
++            // 
++            // mapFolderTB
++            // 
++            this.mapFolderTB.Location = new System.Drawing.Point(141, 16);
++            this.mapFolderTB.Name = "mapFolderTB";
++            this.mapFolderTB.Size = new System.Drawing.Size(201, 20);
++            this.mapFolderTB.TabIndex = 1;
++            // 
++            // label10
++            // 
++            this.label10.AutoSize = true;
++            this.label10.Location = new System.Drawing.Point(3, 238);
++            this.label10.Name = "label10";
++            this.label10.Size = new System.Drawing.Size(95, 13);
++            this.label10.TabIndex = 0;
++            this.label10.Text = "  Victory Cities File:";
++            // 
++            // label7
++            // 
++            this.label7.AutoSize = true;
++            this.label7.Location = new System.Drawing.Point(3, 213);
++            this.label7.Name = "label7";
++            this.label7.Size = new System.Drawing.Size(116, 13);
++            this.label7.TabIndex = 0;
++            this.label7.Text = "  Name Placement File:";
++            // 
++            // label6
++            // 
++            this.label6.AutoSize = true;
++            this.label6.Location = new System.Drawing.Point(3, 188);
++            this.label6.Name = "label6";
++            this.label6.Size = new System.Drawing.Size(85, 13);
++            this.label6.TabIndex = 0;
++            this.label6.Text = "  Placement File:";
++            // 
++            // label9
++            // 
++            this.label9.AutoSize = true;
++            this.label9.Location = new System.Drawing.Point(4, 139);
++            this.label9.Name = "label9";
++            this.label9.Size = new System.Drawing.Size(100, 13);
++            this.label9.TabIndex = 0;
++            this.label9.Text = "  Relief Tiles Folder:";
++            // 
++            // label8
++            // 
++            this.label8.AutoSize = true;
++            this.label8.Location = new System.Drawing.Point(4, 115);
++            this.label8.Name = "label8";
++            this.label8.Size = new System.Drawing.Size(83, 13);
++            this.label8.TabIndex = 0;
++            this.label8.Text = "* Properties File:";
++            // 
++            // label5
++            // 
++            this.label5.AutoSize = true;
++            this.label5.Location = new System.Drawing.Point(4, 91);
++            this.label5.Name = "label5";
++            this.label5.Size = new System.Drawing.Size(79, 13);
++            this.label5.TabIndex = 0;
++            this.label5.Text = "* Polygons File:";
++            // 
++            // label4
++            // 
++            this.label4.AutoSize = true;
++            this.label4.Location = new System.Drawing.Point(4, 67);
++            this.label4.Name = "label4";
++            this.label4.Size = new System.Drawing.Size(72, 13);
++            this.label4.TabIndex = 0;
++            this.label4.Text = "* Centers File:";
++            // 
++            // label3
++            // 
++            this.label3.AutoSize = true;
++            this.label3.Location = new System.Drawing.Point(5, 43);
++            this.label3.Name = "label3";
++            this.label3.Size = new System.Drawing.Size(98, 13);
++            this.label3.TabIndex = 0;
++            this.label3.Text = "* Base Tiles Folder:";
++            // 
++            // label2
++            // 
++            this.label2.AutoSize = true;
++            this.label2.Location = new System.Drawing.Point(4, 164);
++            this.label2.Name = "label2";
++            this.label2.Size = new System.Drawing.Size(64, 13);
++            this.label2.TabIndex = 0;
++            this.label2.Text = "  Image File:";
++            // 
++            // label1
++            // 
++            this.label1.AutoSize = true;
++            this.label1.Location = new System.Drawing.Point(5, 19);
++            this.label1.Name = "label1";
++            this.label1.Size = new System.Drawing.Size(70, 13);
++            this.label1.TabIndex = 0;
++            this.label1.Text = "* Map Folder:";
++            // 
++            // previewResizedMapBTN
++            // 
++            this.previewResizedMapBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
++            this.previewResizedMapBTN.Location = new System.Drawing.Point(6, 53);
++            this.previewResizedMapBTN.Name = "previewResizedMapBTN";
++            this.previewResizedMapBTN.Size = new System.Drawing.Size(214, 35);
++            this.previewResizedMapBTN.TabIndex = 1;
++            this.previewResizedMapBTN.Text = "Preview Resized Map";
++            this.previewResizedMapBTN.UseVisualStyleBackColor = true;
++            this.previewResizedMapBTN.Click += new System.EventHandler(this.previewResizedMapBTN_Click);
++            // 
++            // resizeMapFilesBTN
++            // 
++            this.resizeMapFilesBTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
++            this.resizeMapFilesBTN.Location = new System.Drawing.Point(235, 448);
++            this.resizeMapFilesBTN.Name = "resizeMapFilesBTN";
++            this.resizeMapFilesBTN.Size = new System.Drawing.Size(214, 35);
++            this.resizeMapFilesBTN.TabIndex = 2;
++            this.resizeMapFilesBTN.Text = "Resize Map Files";
++            this.resizeMapFilesBTN.UseVisualStyleBackColor = true;
++            this.resizeMapFilesBTN.Click += new System.EventHandler(this.resizeMapFilesBTN_Click);
++            // 
++            // radioButton1
++            // 
++            this.radioButton1.AutoSize = true;
++            this.radioButton1.Checked = true;
++            this.radioButton1.Location = new System.Drawing.Point(6, 7);
++            this.radioButton1.Name = "radioButton1";
++            this.radioButton1.Size = new System.Drawing.Size(120, 17);
++            this.radioButton1.TabIndex = 4;
++            this.radioButton1.TabStop = true;
++            this.radioButton1.Text = "Resize Using Scale:";
++            this.radioButton1.UseVisualStyleBackColor = true;
++            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
++            // 
++            // radioButton2
++            // 
++            this.radioButton2.AutoSize = true;
++            this.radioButton2.Location = new System.Drawing.Point(209, 6);
++            this.radioButton2.Name = "radioButton2";
++            this.radioButton2.Size = new System.Drawing.Size(133, 17);
++            this.radioButton2.TabIndex = 4;
++            this.radioButton2.Text = "Resize To Dimensions:";
++            this.radioButton2.UseVisualStyleBackColor = true;
++            // 
++            // mapScaleUPDOWN
++            // 
++            this.mapScaleUPDOWN.Location = new System.Drawing.Point(127, 6);
++            this.mapScaleUPDOWN.Maximum = new decimal(new int[] {
++            500,
++            0,
++            0,
++            0});
++            this.mapScaleUPDOWN.Minimum = new decimal(new int[] {
++            10,
++            0,
++            0,
++            0});
++            this.mapScaleUPDOWN.Name = "mapScaleUPDOWN";
++            this.mapScaleUPDOWN.Size = new System.Drawing.Size(63, 20);
++            this.mapScaleUPDOWN.TabIndex = 5;
++            this.mapScaleUPDOWN.Value = new decimal(new int[] {
++            100,
++            0,
++            0,
++            0});
++            // 
++            // label15
++            // 
++            this.label15.AutoSize = true;
++            this.label15.Location = new System.Drawing.Point(191, 9);
++            this.label15.Name = "label15";
++            this.label15.Size = new System.Drawing.Size(15, 13);
++            this.label15.TabIndex = 6;
++            this.label15.Text = "%";
++            // 
++            // mapSizeTB
++            // 
++            this.mapSizeTB.AcceptsReturn = true;
++            this.mapSizeTB.Enabled = false;
++            this.mapSizeTB.Location = new System.Drawing.Point(341, 5);
++            this.mapSizeTB.Name = "mapSizeTB";
++            this.mapSizeTB.Size = new System.Drawing.Size(98, 20);
++            this.mapSizeTB.TabIndex = 7;
++            this.mapSizeTB.Text = "0,0";
++            // 
++            // useImageSmoothing
++            // 
++            this.useImageSmoothing.AutoSize = true;
++            this.useImageSmoothing.Location = new System.Drawing.Point(157, 32);
++            this.useImageSmoothing.Name = "useImageSmoothing";
++            this.useImageSmoothing.Size = new System.Drawing.Size(130, 17);
++            this.useImageSmoothing.TabIndex = 8;
++            this.useImageSmoothing.Text = "Use Image Smoothing";
++            this.useImageSmoothing.UseVisualStyleBackColor = true;
++            // 
++            // statusStrip1
++            // 
++            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
++            this.statusLabel,
++            this.progressBar});
++            this.statusStrip1.Location = new System.Drawing.Point(0, 497);
++            this.statusStrip1.Name = "statusStrip1";
++            this.statusStrip1.Size = new System.Drawing.Size(466, 22);
++            this.statusStrip1.TabIndex = 9;
++            this.statusStrip1.Text = "statusStrip1";
++            // 
++            // statusLabel
++            // 
++            this.statusLabel.Name = "statusLabel";
++            this.statusLabel.Size = new System.Drawing.Size(50, 17);
++            this.statusLabel.Text = "Ready...";
++            // 
++            // progressBar
++            // 
++            this.progressBar.Name = "progressBar";
++            this.progressBar.Size = new System.Drawing.Size(250, 16);
++            // 
++            // tabControl1
++            // 
++            this.tabControl1.Controls.Add(this.tabPage1);
++            this.tabControl1.Controls.Add(this.tabPage2);
++            this.tabControl1.Location = new System.Drawing.Point(6, 373);
++            this.tabControl1.Name = "tabControl1";
++            this.tabControl1.SelectedIndex = 0;
++            this.tabControl1.Size = new System.Drawing.Size(454, 118);
++            this.tabControl1.TabIndex = 10;
++            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
++            // 
++            // tabPage1
++            // 
++            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
++            this.tabPage1.Controls.Add(this.radioButton1);
++            this.tabPage1.Controls.Add(this.useImageSmoothing);
++            this.tabPage1.Controls.Add(this.previewResizedMapBTN);
++            this.tabPage1.Controls.Add(this.mapSizeTB);
++            this.tabPage1.Controls.Add(this.label15);
++            this.tabPage1.Controls.Add(this.radioButton2);
++            this.tabPage1.Controls.Add(this.mapScaleUPDOWN);
++            this.tabPage1.Location = new System.Drawing.Point(4, 22);
++            this.tabPage1.Name = "tabPage1";
++            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
++            this.tabPage1.Size = new System.Drawing.Size(446, 92);
++            this.tabPage1.TabIndex = 0;
++            this.tabPage1.Text = "Map Resizing";
++            // 
++            // tabPage2
++            // 
++            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
++            this.tabPage2.Controls.Add(this.label16);
++            this.tabPage2.Controls.Add(this.previewShiftedMapButton);
++            this.tabPage2.Controls.Add(this.shiftingAmountTextbox);
++            this.tabPage2.Location = new System.Drawing.Point(4, 22);
++            this.tabPage2.Name = "tabPage2";
++            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
++            this.tabPage2.Size = new System.Drawing.Size(446, 92);
++            this.tabPage2.TabIndex = 1;
++            this.tabPage2.Text = "Map Shifting";
++            // 
++            // label16
++            // 
++            this.label16.AutoSize = true;
++            this.label16.Location = new System.Drawing.Point(6, 20);
++            this.label16.Name = "label16";
++            this.label16.Size = new System.Drawing.Size(129, 13);
++            this.label16.TabIndex = 16;
++            this.label16.Text = "Shifting(Panning) Amount:";
++            // 
++            // previewShiftedMapButton
++            // 
++            this.previewShiftedMapButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
++            this.previewShiftedMapButton.Location = new System.Drawing.Point(6, 53);
++            this.previewShiftedMapButton.Name = "previewShiftedMapButton";
++            this.previewShiftedMapButton.Size = new System.Drawing.Size(214, 35);
++            this.previewShiftedMapButton.TabIndex = 9;
++            this.previewShiftedMapButton.Text = "Preview Shifted Map";
++            this.previewShiftedMapButton.UseVisualStyleBackColor = true;
++            this.previewShiftedMapButton.Click += new System.EventHandler(this.previewShiftedMapButton_Click);
++            // 
++            // shiftingAmountTextbox
++            // 
++            this.shiftingAmountTextbox.AcceptsReturn = true;
++            this.shiftingAmountTextbox.AcceptsTab = true;
++            this.shiftingAmountTextbox.Location = new System.Drawing.Point(141, 17);
++            this.shiftingAmountTextbox.Name = "shiftingAmountTextbox";
++            this.shiftingAmountTextbox.Size = new System.Drawing.Size(98, 20);
++            this.shiftingAmountTextbox.TabIndex = 15;
++            this.shiftingAmountTextbox.Text = "0,0";
++            // 
++            // shiftMapFilesButton
++            // 
++            this.shiftMapFilesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
++            this.shiftMapFilesButton.Location = new System.Drawing.Point(235, 448);
++            this.shiftMapFilesButton.Name = "shiftMapFilesButton";
++            this.shiftMapFilesButton.Size = new System.Drawing.Size(214, 35);
++            this.shiftMapFilesButton.TabIndex = 10;
++            this.shiftMapFilesButton.Text = "Shift Map Files";
++            this.shiftMapFilesButton.UseVisualStyleBackColor = true;
++            this.shiftMapFilesButton.Click += new System.EventHandler(this.shiftMapFilesButton_Click);
++            // 
++            // Main
++            // 
++            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
++            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
++            this.ClientSize = new System.Drawing.Size(466, 519);
++            this.Controls.Add(this.resizeMapFilesBTN);
++            this.Controls.Add(this.shiftMapFilesButton);
++            this.Controls.Add(this.statusStrip1);
++            this.Controls.Add(this.groupBox1);
++            this.Controls.Add(this.tabControl1);
++            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
++            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
++            this.MaximizeBox = false;
++            this.MinimizeBox = false;
++            this.Name = "Main";
++            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
++            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
++            this.Text = "TripleA Map Resizer And Shifter";
++            this.Load += new System.EventHandler(this.Form1_Load);
++            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
++            this.groupBox1.ResumeLayout(false);
++            this.groupBox1.PerformLayout();
++            ((System.ComponentModel.ISupportInitialize)(this.mapScaleUPDOWN)).EndInit();
++            this.statusStrip1.ResumeLayout(false);
++            this.statusStrip1.PerformLayout();
++            this.tabControl1.ResumeLayout(false);
++            this.tabPage1.ResumeLayout(false);
++            this.tabPage1.PerformLayout();
++            this.tabPage2.ResumeLayout(false);
++            this.tabPage2.PerformLayout();
++            this.ResumeLayout(false);
++            this.PerformLayout();
++
++        }
++
++        #endregion
++
++        private System.Windows.Forms.GroupBox groupBox1;
++        private System.Windows.Forms.Label label5;
++        private System.Windows.Forms.Label label4;
++        private System.Windows.Forms.Label label3;
++        private System.Windows.Forms.Label label2;
++        private System.Windows.Forms.Label label1;
++        private System.Windows.Forms.Label label7;
++        private System.Windows.Forms.Label label6;
++        private System.Windows.Forms.Button browseButton10;
++        private System.Windows.Forms.Button browseButton9;
++        private System.Windows.Forms.Button browseButton8;
++        private System.Windows.Forms.Button browseButton5;
++        private System.Windows.Forms.Button browseButton4;
++        private System.Windows.Forms.Button browseButton3;
++        private System.Windows.Forms.Button browseButton2;
++        private System.Windows.Forms.Button browseButton1;
++        private System.Windows.Forms.TextBox namePlacementFileTB;
++        private System.Windows.Forms.TextBox placementFileTB;
++        private System.Windows.Forms.TextBox imageFileTB;
++        private System.Windows.Forms.TextBox propertiesFileTB;
++        private System.Windows.Forms.TextBox polygonsFileTB;
++        private System.Windows.Forms.TextBox centersFileTB;
++        private System.Windows.Forms.TextBox baseTilesFolderTB;
++        private System.Windows.Forms.TextBox mapFolderTB;
++        private System.Windows.Forms.Label label8;
++        private System.Windows.Forms.Button browseButton7;
++        private System.Windows.Forms.TextBox reliefTilesFolderTB;
++        private System.Windows.Forms.Label label9;
++        private System.Windows.Forms.Button browseButton14;
++        private System.Windows.Forms.Button browseButton13;
++        private System.Windows.Forms.Button browseButton12;
++        private System.Windows.Forms.Button browseButton11;
++        private System.Windows.Forms.TextBox capitolsFileTB;
++        private System.Windows.Forms.TextBox decorationsFileTB;
++        private System.Windows.Forms.TextBox ipcPlacementTB;
++        private System.Windows.Forms.TextBox vcTB;
++        private System.Windows.Forms.Label label13;
++        private System.Windows.Forms.Label label12;
++        private System.Windows.Forms.Label label11;
++        private System.Windows.Forms.Label label10;
++        private System.Windows.Forms.Button browseButton15;
++        private System.Windows.Forms.TextBox KamikazePlacementFileTB;
++        private System.Windows.Forms.Label label14;
++        private System.Windows.Forms.Button previewResizedMapBTN;
++        private System.Windows.Forms.Button resizeMapFilesBTN;
++        private System.Windows.Forms.RadioButton radioButton1;
++        private System.Windows.Forms.RadioButton radioButton2;
++        private System.Windows.Forms.NumericUpDown mapScaleUPDOWN;
++        private System.Windows.Forms.Label label15;
++        private System.Windows.Forms.TextBox mapSizeTB;
++        private System.Windows.Forms.CheckBox useImageSmoothing;
++        private System.Windows.Forms.StatusStrip statusStrip1;
++        private System.Windows.Forms.ToolStripStatusLabel statusLabel;
++        private System.Windows.Forms.ToolStripProgressBar progressBar;
++        private System.Windows.Forms.TabControl tabControl1;
++        private System.Windows.Forms.TabPage tabPage1;
++        private System.Windows.Forms.TabPage tabPage2;
++        private System.Windows.Forms.Button previewShiftedMapButton;
++        private System.Windows.Forms.TextBox shiftingAmountTextbox;
++        private System.Windows.Forms.Button shiftMapFilesButton;
++        private System.Windows.Forms.Label label16;
++    }
++}
++
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Main.csDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Main.cs
+@@ -0,0 +1,1348 @@
++using System;
++using System.Collections.Generic;
++using System.ComponentModel;
++using System.Data;
++using System.Drawing;
++using System.Text;
++using System.Windows.Forms;
++using System.IO;
++using System.Threading;
++using System.Net;
++using System.Drawing.Drawing2D;
++
++namespace TripleA_Map_Resizer
++{
++    public partial class Main : Form
++    {
++        public Main()
++        {
++            InitializeComponent();
++            exceptionViewerWindow.main = this;
++            Main.CheckForIllegalCrossThreadCalls = false;
++            CheckForUpdates();
++        }
++        private Version usersVersion = new Version(1, 0, 1, 5);
++        public void CheckForUpdates()
++        {
++            Thread t = new Thread(new ThreadStart(update));
++            t.Priority = ThreadPriority.Lowest;
++            t.IsBackground = true;
++            t.Start();
++        }
++        private void update()
++        {
++            WebClient client = new WebClient(); //http://tmapc.googlecode.com/files/TripleA%20Map%20Creator%20v1.0.0.8.zip
++            Version currentCheckingVersion = usersVersion;
++            Version newestVersionAvailable = usersVersion;
++            bool doBreak = false;
++            bool hasStartedFindingVersions = false;
++
++            while (!doBreak)
++            {
++                try
++                {
++                    Stream s = client.OpenRead("http://tmapc.googlecode.com/files/TripleA%20Map%20Creator%20v" + currentCheckingVersion.ToString() + ".zip");
++                    newestVersionAvailable = currentCheckingVersion;
++                    if (currentCheckingVersion.Revision < 9)
++                        currentCheckingVersion = new Version(currentCheckingVersion.Major, currentCheckingVersion.Minor, currentCheckingVersion.Build, currentCheckingVersion.Revision + 1);
++                    else if (currentCheckingVersion.Build < 9)
++                        currentCheckingVersion = new Version(currentCheckingVersion.Major, currentCheckingVersion.Minor, currentCheckingVersion.Build + 1, 0);
++                    else if (currentCheckingVersion.Minor < 9)
++                        currentCheckingVersion = new Version(currentCheckingVersion.Major, currentCheckingVersion.Minor + 1, 0, 0);
++                    else if (currentCheckingVersion.Major < 9)
++                        currentCheckingVersion = new Version(currentCheckingVersion.Major + 1, 0, 0, 0);
++
++                    s.Close();
++                    hasStartedFindingVersions = true;
++                }
++                catch
++                {
++                    if (hasStartedFindingVersions)
++                        break;
++                    else
++                    {
++                        if (currentCheckingVersion.Revision < 9)
++                            currentCheckingVersion = new Version(currentCheckingVersion.Major, currentCheckingVersion.Minor, currentCheckingVersion.Build, currentCheckingVersion.Revision + 1);
++                        else if (currentCheckingVersion.Build < 9)
++                            currentCheckingVersion = new Version(currentCheckingVersion.Major, currentCheckingVersion.Minor, currentCheckingVersion.Build + 1, 0);
++                        else if (currentCheckingVersion.Minor < 9)
++                            currentCheckingVersion = new Version(currentCheckingVersion.Major, currentCheckingVersion.Minor + 1, 0, 0);
++                        else if (currentCheckingVersion.Major < 9)
++                            currentCheckingVersion = new Version(currentCheckingVersion.Major + 1, 0, 0, 0);
++                    }
++                }
++            }
++            if (Convert.ToInt32(usersVersion.ToString().Replace(".", "")) < Convert.ToInt32(newestVersionAvailable.ToString().Replace(".", "")))
++            {
++                MessageBox.Show("There is a newer version of the Map Creator available.\r\nYour version: " + usersVersion.ToString() + ".\r\nNewest Version: " + newestVersionAvailable.ToString() + ".\r\n\r\nTo download the latest version, please go to \"http://code.google.com/p/tmapc/downloads/list\" and click on the latest download.", "Checking For Updates");
++            }
++        }
++        private void Form1_Load(object sender, EventArgs e)
++        {
++
++        }
++
++        private void browseButton1_Click(object sender, EventArgs e)
++        {
++            FolderBrowserDialog folderBrowser = new FolderBrowserDialog();
++            folderBrowser.Description = "Please select the folder that contains all the map files.";
++            folderBrowser.RootFolder = Environment.SpecialFolder.Desktop;
++            if (folderBrowser.ShowDialog() == DialogResult.OK)
++            {
++                mapFolderTB.Text = folderBrowser.SelectedPath;
++                DirectoryInfo folder = new DirectoryInfo(folderBrowser.SelectedPath);
++                if (MessageBox.Show("Do you want the program to try to populate all the map information files automattically?", "Auto-Populate Files",MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
++                {
++                    foreach (Control cur in groupBox1.Controls)
++                    {
++                        if (cur is TextBox)
++                        {
++                            cur.Text = "";
++                        }
++                    }
++                    mapFolderTB.Text = folderBrowser.SelectedPath;
++                    foreach (DirectoryInfo directory in folder.GetDirectories())
++                    {
++                        if (directory.Name.ToLower() == "basetiles")
++                        {
++                            baseTilesFolderTB.Text = directory.FullName;
++                        }
++                        else if (directory.Name.ToLower() == "relieftiles")
++                        {
++                            reliefTilesFolderTB.Text = directory.FullName;
++                        }
++                    }
++                    foreach (FileInfo file in folder.GetFiles())
++                    {
++                        if (file.Extension.ToLower() == ".txt")
++                        {
++                            if (file.Name.ToLower() == "centers.txt")
++                            {
++                                centersFileTB.Text = file.FullName;
++                            }
++                            else if (file.Name.ToLower() == "polygons.txt")
++                            {
++                                polygonsFileTB.Text = file.FullName;
++                            }
++                            else if (file.Name.ToLower() == "place.txt")
++                            {
++                                placementFileTB.Text = file.FullName;
++                            }
++                            else if (file.Name.ToLower() == "name_place.txt")
++                            {
++                                namePlacementFileTB.Text = file.FullName;
++                            }
++                            else if (file.Name.ToLower() == "vc.txt")
++                            {
++                                vcTB.Text = file.FullName;
++                            }
++                            else if (file.Name.ToLower() == "ipc_place.txt")
++                            {
++                                ipcPlacementTB.Text = file.FullName;
++                            }
++                            else if (file.Name.ToLower() == "decorations.txt")
++                            {
++                                decorationsFileTB.Text = file.FullName;
++                            }
++                            else if (file.Name.ToLower() == "capitols.txt")
++                            {
++                                capitolsFileTB.Text = file.FullName;
++                            }
++                            else if (file.Name.ToLower() == "kamikaze_place.txt")
++                            {
++                                KamikazePlacementFileTB.Text = file.FullName;
++                            }
++                        }
++                        else if (file.Extension.ToLower() == ".properties")
++                        {
++                            propertiesFileTB.Text = file.FullName;
++                            if(File.Exists(propertiesFileTB.Text))
++                            {
++                                Size mapSize = getMapSize(new FileInfo(propertiesFileTB.Text));
++                                mapSizeTB.Text = mapSize.Width + ","+ mapSize.Height;
++                            }
++                        }
++                        else if (file.Extension.ToLower() == ".png" || file.Extension.ToLower() == ".jpg" || file.Extension.ToLower() == ".bmp")
++                        {
++                            imageFileTB.Text = file.FullName;
++                            Image image = Image.FromFile(file.FullName);
++                            mapSizeTB.Text = image.Size.Width + "," + image.Size.Height; 
++                            image.Dispose();
++                        }
++                    }
++                }
++            }
++
++        }
++        private void browseButton2_Click(object sender, EventArgs e)
++        {
++            FolderBrowserDialog folderBrowser = new FolderBrowserDialog();
++            folderBrowser.Description = "Please select the 'baseTiles' folder that contains all the map's base tiles.";
++            folderBrowser.RootFolder = Environment.SpecialFolder.Desktop;
++            if (folderBrowser.ShowDialog() == DialogResult.OK)
++            {
++                baseTilesFolderTB.Text = folderBrowser.SelectedPath;
++            }
++        }
++
++        private void browseButton3_Click(object sender, EventArgs e)
++        {
++            OpenFileDialog fileBrowser = new OpenFileDialog();
++            fileBrowser.CheckFileExists = true;
++            fileBrowser.CheckPathExists = true;
++            fileBrowser.Filter = "Text Files (*.txt)|*.txt";
++            fileBrowser.Multiselect = false;
++            fileBrowser.Title = "Please select the map's 'centers.txt' file";
++            if (fileBrowser.ShowDialog(this) == DialogResult.OK)
++            {
++                centersFileTB.Text = fileBrowser.FileName;
++            }
++        }
++
++        private void browseButton4_Click(object sender, EventArgs e)
++        {
++            OpenFileDialog fileBrowser = new OpenFileDialog();
++            fileBrowser.CheckFileExists = true;
++            fileBrowser.CheckPathExists = true;
++            fileBrowser.Filter = "Text Files (*.txt)|*.txt";
++            fileBrowser.Multiselect = false;
++            fileBrowser.Title = "Please select the map's 'polygons.txt' file";
++            if (fileBrowser.ShowDialog(this) == DialogResult.OK)
++            {
++                polygonsFileTB.Text = fileBrowser.FileName;
++            }
++        }
++
++        private void browseButton5_Click(object sender, EventArgs e)
++        {
++            OpenFileDialog fileBrowser = new OpenFileDialog();
++            fileBrowser.CheckFileExists = true;
++            fileBrowser.CheckPathExists = true;
++            fileBrowser.Filter = "Map Properties Files (*.properties)|*.properties";
++            fileBrowser.Multiselect = false;
++            fileBrowser.Title = "Please select the map's 'map.properties' file";
++            if (fileBrowser.ShowDialog(this) == DialogResult.OK)
++            {
++                propertiesFileTB.Text = fileBrowser.FileName;
++            }
++        }
++
++        private void browseButton7_Click(object sender, EventArgs e)
++        {
++            FolderBrowserDialog folderBrowser = new FolderBrowserDialog();
++            folderBrowser.Description = "Please select the 'reliefTiles' folder that contains all the map's relief tiles.";
++            folderBrowser.RootFolder = Environment.SpecialFolder.Desktop;
++            if (folderBrowser.ShowDialog() == DialogResult.OK)
++            {
++                reliefTilesFolderTB.Text = folderBrowser.SelectedPath;
++            }
++        }
++
++        private void browseButton8_Click(object sender, EventArgs e)
++        {
++            OpenFileDialog fileBrowser = new OpenFileDialog();
++            fileBrowser.CheckFileExists = true;
++            fileBrowser.CheckPathExists = true;
++            fileBrowser.Filter = "Image Files (*.png,*.jpg,*.jpeg,*.bmp)|*.png;*.jpg;*.jpeg;*.bmp|PNG Files (*.png)|*.png|JPEG Files (*.jpg,*.jpeg)|*.jpg;*.jpeg|Bitmap Files (*.bmp)|*.bmp";
++            fileBrowser.Multiselect = false;
++            fileBrowser.Title = "Please select the map's image file.";
++            if (fileBrowser.ShowDialog(this) == DialogResult.OK)
++            {
++                imageFileTB.Text = fileBrowser.FileName;
++            }
++        }
++
++        private void browseButton9_Click(object sender, EventArgs e)
++        {
++            OpenFileDialog fileBrowser = new OpenFileDialog();
++            fileBrowser.CheckFileExists = true;
++            fileBrowser.CheckPathExists = true;
++            fileBrowser.Filter = "Text Files (*.txt)|*.txt";
++            fileBrowser.Multiselect = false;
++            fileBrowser.Title = "Please select the map's 'place.txt' file";
++            if (fileBrowser.ShowDialog(this) == DialogResult.OK)
++            {
++                placementFileTB.Text = fileBrowser.FileName;
++            }
++        }
++
++        private void browseButton10_Click(object sender, EventArgs e)
++        {
++            OpenFileDialog fileBrowser = new OpenFileDialog();
++            fileBrowser.CheckFileExists = true;
++            fileBrowser.CheckPathExists = true;
++            fileBrowser.Filter = "Text Files (*.txt)|*.txt";
++            fileBrowser.Multiselect = false;
++            fileBrowser.Title = "Please select the map's 'name_place.txt' file";
++            if (fileBrowser.ShowDialog(this) == DialogResult.OK)
++            {
++                namePlacementFileTB.Text = fileBrowser.FileName;
++            }
++        }
++
++        private void browseButton11_Click(object sender, EventArgs e)
++        {
++            OpenFileDialog fileBrowser = new OpenFileDialog();
++            fileBrowser.CheckFileExists = true;
++            fileBrowser.CheckPathExists = true;
++            fileBrowser.Filter = "Text Files (*.txt)|*.txt";
++            fileBrowser.Multiselect = false;
++            fileBrowser.Title = "Please select the map's 'vc.txt' file";
++            if (fileBrowser.ShowDialog(this) == DialogResult.OK)
++            {
++                vcTB.Text = fileBrowser.FileName;
++            }
++        }
++
++        private void browseButton12_Click(object sender, EventArgs e)
++        {
++            OpenFileDialog fileBrowser = new OpenFileDialog();
++            fileBrowser.CheckFileExists = true;
++            fileBrowser.CheckPathExists = true;
++            fileBrowser.Filter = "Text Files (*.txt)|*.txt";
++            fileBrowser.Multiselect = false;
++            fileBrowser.Title = "Please select the map's 'ipc_place.txt' file";
++            if (fileBrowser.ShowDialog(this) == DialogResult.OK)
++            {
++                ipcPlacementTB.Text = fileBrowser.FileName;
++            }
++        }
++
++        private void browseButton13_Click(object sender, EventArgs e)
++        {
++            OpenFileDialog fileBrowser = new OpenFileDialog();
++            fileBrowser.CheckFileExists = true;
++            fileBrowser.CheckPathExists = true;
++            fileBrowser.Filter = "Text Files (*.txt)|*.txt";
++            fileBrowser.Multiselect = false;
++            fileBrowser.Title = "Please select the map's 'decorations.txt' file";
++            if (fileBrowser.ShowDialog(this) == DialogResult.OK)
++            {
++                decorationsFileTB.Text = fileBrowser.FileName;
++            }
++        }
++
++        private void browseButton14_Click(object sender, EventArgs e)
++        {
++            OpenFileDialog fileBrowser = new OpenFileDialog();
++            fileBrowser.CheckFileExists = true;
++            fileBrowser.CheckPathExists = true;
++            fileBrowser.Filter = "Text Files (*.txt)|*.txt";
++            fileBrowser.Multiselect = false;
++            fileBrowser.Title = "Please select the map's 'capitols.txt' file";
++            if (fileBrowser.ShowDialog(this) == DialogResult.OK)
++            {
++                capitolsFileTB.Text = fileBrowser.FileName;
++            }
++        }
++
++        private void browseButton15_Click(object sender, EventArgs e)
++        {
++            OpenFileDialog fileBrowser = new OpenFileDialog();
++            fileBrowser.CheckFileExists = true;
++            fileBrowser.CheckPathExists = true;
++            fileBrowser.Filter = "Text Files (*.txt)|*.txt";
++            fileBrowser.Multiselect = false;
++            fileBrowser.Title = "Please select the map's 'kamikaze_place.txt' file";
++            if (fileBrowser.ShowDialog(this) == DialogResult.OK)
++            {
++                KamikazePlacementFileTB.Text = fileBrowser.FileName;
++            }
++        }
++        MapPreviewWindow mapPreviewWindow = new MapPreviewWindow();
++        bool needToReconstructMapImage = true;
++        public Bitmap reconstructedMapImage = new Bitmap(1, 1);
++        private void previewResizedMapBTN_Click(object sender, EventArgs e)
++        {
++            try
++            {
++                if (!ValidateMapFilesAndFolders())
++                {
++                    MessageBox.Show("Some of the map files and/or folders are invalid, do not exist, or are required and are not entered. The program cannot preview the resized map until all the files and folders are valid.", "Invalid Files Or Folders");
++                    StartAllowingEditing();
++                    return;
++                }
++                if (!File.Exists(propertiesFileTB.Text))
++                {
++                    MessageBox.Show("Unable to recreate the map image from the base tiles bacause the map properties file is invalid or does not exist.", "Unable To Recreate Map Image");
++                    StartAllowingEditing();
++                    return;
++                }
++                Size oldSize = getMapSize(new FileInfo(propertiesFileTB.Text));
++                if (oldSize.Width == 0 || oldSize.Height == 0)
++                {
++                    MessageBox.Show("Unable to recreate the map image from the base tiles bacause the map properties file is invalid or does not exist.", "Unable To Recreate Map Image");
++                    StartAllowingEditing();
++                    return;
++                }
++                if (needToReconstructMapImage)
++                {
++                    needToReconstructMapImage = false;
++                    if (!Directory.Exists(baseTilesFolderTB.Text))
++                    {
++                        MessageBox.Show("Unable to recreate the map image from the base tiles bacause the base tiles folder is invalid or does not exist.", "Unable To Recreate Map Image");
++                        StartAllowingEditing();
++                        return;
++                    }
++                    reconstructedMapImage = ReconstructMapImageUsingBaseTiles(new DirectoryInfo(baseTilesFolderTB.Text), oldSize);
++                }
++                Size newSize = getScaledSize(oldSize);
++                Bitmap resizedBitmap = new Bitmap(newSize.Width, newSize.Height);
++                Graphics grphx = Graphics.FromImage(resizedBitmap);
++                if (useImageSmoothing.Checked)
++                {
++                    grphx.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
++                }
++                else
++                {
++                    grphx.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
++                }
++                grphx.DrawImage(reconstructedMapImage, new Rectangle(new Point(0, 0), newSize));
++                mapPreviewWindow.DisplayImage(resizedBitmap);
++                grphx.Dispose();
++            }
++            catch (FileNotFoundException ex)
++            { MessageBox.Show("The map image file does not exist.", "File Not Found"); }
++            catch (Exception ex) { if (MessageBox.Show("An error occured when trying to preview the resized map image. Do you want to view the error message?", "Error Previewing Resized Image", MessageBoxButtons.YesNoCancel) == DialogResult.Yes) { exceptionViewerWindow.ShowInformationAboutException(ex, true); } }
++            //catch { }
++        }
++        public delegate void setClipboardTextDel(string clipboardTextPar);
++        //public Delegate setClipboardTextDelegate = Delegate.CreateDelegate(null, null);
++        ExceptionViewer exceptionViewerWindow = new ExceptionViewer();
++        private Bitmap ReconstructMapImageUsingBaseTiles(DirectoryInfo baseTilesFolder,Size mapSize)
++        {
++            List<FileInfo> files = new List<FileInfo>(baseTilesFolder.GetFiles());
++            List<FileInfo> images = new List<FileInfo>();
++            foreach (FileInfo cur in files)
++            {
++                if (cur.Extension.ToLower() == ".png")
++                {
++                    images.Add(cur);
++                }
++            }
++            Image fullImage = new Bitmap(mapSize.Width, mapSize.Height);
++            Graphics grphx = Graphics.FromImage(fullImage);
++            grphx.Clear(Color.White);
++            foreach (FileInfo image in images)
++            {
++                try
++                {
++                    int x = Convert.ToInt32(image.Name.Substring(0, image.Name.IndexOf("_")));
++                    int y = Convert.ToInt32(image.Name.Substring(image.Name.IndexOf("_") + 1, image.Name.Substring(image.Name.IndexOf("_") + 1).IndexOf(".")));
++                    Image imageToPaste = Image.FromFile(image.FullName);
++                    Point pasteLoc = new Point(x * 256, y * 256);
++                    grphx.DrawImage(imageToPaste, pasteLoc);
++                    imageToPaste.Dispose();
++                }
++                catch {}
++            }
++            return (Bitmap)fullImage;
++        }
++
++        private Size getMapSize(FileInfo mapPropertiesFile)
++        {
++            Size result = new Size();
++            string[] lines = File.ReadAllLines(mapPropertiesFile.FullName);
++            foreach (string cur in lines)
++            {
++                if (cur.ToLower().Contains("map.width="))
++                {
++                    result.Width = Convert.ToInt32(cur.ToLower().Substring(cur.ToLower().IndexOf(".width=") + 7));
++                }
++                if (cur.ToLower().Contains("map.height="))
++                {
++                    result.Height = Convert.ToInt32(cur.ToLower().Substring(cur.ToLower().IndexOf(".height=") + 8));
++                }
++            }
++            return result;
++        }
++        private Size getScaledSize(Size oldSize)
++        {
++            if (radioButton1.Checked)
++            {
++                float ratio = ((float)mapScaleUPDOWN.Value / 100F);
++                return new Size((int)(oldSize.Width * ratio), (int)(oldSize.Height * ratio));
++            }
++            else
++            {
++                string text = mapSizeTB.Text.Trim();
++                return new Size(Convert.ToInt32(text.Substring(0, text.IndexOf(","))), Convert.ToInt32(text.Substring(text.IndexOf(",") + 1)));
++            }
++        }
++        private SizeF getScale(Size oldSize, Size newSize)
++        {
++            return new SizeF((float)1.00 + ((float)(newSize.Width - oldSize.Width) / (float)oldSize.Width), (float)1.00 + ((float)(newSize.Height - oldSize.Height) / (float)oldSize.Height));
++        }
++
++        private void resizeMapFilesBTN_Click(object sender, EventArgs e)
++        {
++            if (resizeMapThread == null || !resizeMapThread.IsAlive)
++            {
++                if (!ValidateMapFilesAndFolders())
++                {
++                    MessageBox.Show("Some of the map files and/or folders are invalid, do not exist, or are required and are not entered. The program cannot resize the map until all the files and folders are valid.", "Invalid Files Or Folders");
++                    return;
++                }
++                StopAllowingEditing();
++                resizeMapThread = new Thread(resizeMapMethod);
++                resizeMapThread.IsBackground = true;
++                resizeMapThread.Priority = ThreadPriority.Normal;
++                resizeMapThread.Start();
++            }
++            else
++            {
++                pauseBackgroundThread = true;
++                if (MessageBox.Show("If you cancel the resizing of the map, you may need to restart the program for the resizing to work again. Are you sure you want to cancel the resizing of the map files and folders?", "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
++                {
++                    resizeMapThread.Abort();
++                    StartAllowingEditing();
++                    pauseBackgroundThread = false;
++                }
++                else
++                {
++                    pauseBackgroundThread = false;
++                }
++            }
++        }
++        Thread resizeMapThread;
++        public void resizeMapMethod()
++        {
++            try
++            {
++                if (!File.Exists(propertiesFileTB.Text))
++                {
++                    MessageBox.Show("Unable to recreate the map image from the base tiles bacause the map properties file is invalid or does not exist.", "Unable To Recreate Map Image");
++                    StartAllowingEditing();
++                    return;
++                }
++                Size oldSize = getMapSize(new FileInfo(propertiesFileTB.Text));
++                if (oldSize.Width == 0 || oldSize.Height == 0)
++                {
++                    MessageBox.Show("Unable to recreate the map image from the base tiles bacause the map properties file is invalid or does not exist.", "Unable To Recreate Map Image");
++                    StartAllowingEditing();
++                    return;
++                }
++                if (needToReconstructMapImage)
++                {
++                    needToReconstructMapImage = false;
++                    if (!Directory.Exists(baseTilesFolderTB.Text))
++                    {
++                        MessageBox.Show("Unable to recreate the map image from the base tiles bacause the base tiles folder is invalid or does not exist.", "Unable To Recreate Map Image");
++                        StartAllowingEditing();
++                        return;
++                    }
++                    reconstructedMapImage = ReconstructMapImageUsingBaseTiles(new DirectoryInfo(baseTilesFolderTB.Text), oldSize);
++                }
++                Size newSize = getScaledSize(oldSize);
++                Bitmap resizedBitmap = ResizeImage(reconstructedMapImage, newSize);
++                SizeF scaleRatio = getScale(oldSize, newSize);
++                DialogResult result = MessageBox.Show("Do you want to overwrite the original map data with the resized files and folders?", "Overwrite Map Files", MessageBoxButtons.YesNoCancel);
++                DirectoryInfo mapFolderTW;
++                if (result == DialogResult.Yes)
++                {
++                    mapFolderTW = new DirectoryInfo(mapFolderTB.Text);
++                }
++                else if (result == DialogResult.No)
++                {
++                    mapFolderTW = new DirectoryInfo(mapFolderTB.Text + @"\Resized Map Files");
++                }
++                else
++                {
++                    StartAllowingEditing();
++                    statusLabel.Text = "Ready...";
++                    progressBar.Value = 0;
++                    return;
++                }
++                DirectoryInfo baseTilesFolderTW = new DirectoryInfo(mapFolderTW.FullName + @"\baseTiles");
++                FileInfo centersFileTW = new FileInfo(mapFolderTW.FullName + @"\centers.txt");
++                FileInfo polygonsFileTW = new FileInfo(mapFolderTW.FullName + @"\polygons.txt");
++                FileInfo propertiesFileTW = new FileInfo(mapFolderTW.FullName + @"\map.properties");
++                DirectoryInfo reliefTilesFolderTW = new DirectoryInfo(mapFolderTW.FullName + @"\reliefTiles");
++                FileInfo imageFileTW = new FileInfo(mapFolderTW.FullName + @"\resizedMapImage.png");
++                FileInfo placementFileTW = new FileInfo(mapFolderTW.FullName + @"\place.txt");
++                FileInfo namePlacementFileTW = new FileInfo(mapFolderTW.FullName + @"\name_place.txt");
++                FileInfo victoryCitiesFileTW = new FileInfo(mapFolderTW.FullName + @"\vc.txt");
++                FileInfo ipcPlacementFileTW = new FileInfo(mapFolderTW.FullName + @"\ipc_place.txt");
++                FileInfo decorationsFileTW = new FileInfo(mapFolderTW.FullName + @"\decorations.txt");
++                FileInfo capitolsFileTW = new FileInfo(mapFolderTW.FullName + @"\capitols.txt");
++                FileInfo kamikazePlacementFileTW = new FileInfo(mapFolderTW.FullName + @"\kamikaze_place.txt");
++
++                Directory.CreateDirectory(mapFolderTW.FullName);
++                if (baseTilesFolderTB.Text.Trim().Length > 0 && Directory.Exists(baseTilesFolderTB.Text))
++                {
++                    statusLabel.Text = "Processing Base Tiles...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    Directory.CreateDirectory(baseTilesFolderTW.FullName);
++                    BreakDownImageAndSaveToDirectory(resizedBitmap, baseTilesFolderTW);
++                }
++                if (reliefTilesFolderTB.Text.Trim().Length > 0 && Directory.Exists(reliefTilesFolderTB.Text))
++                {
++                    statusLabel.Text = "Processing Relief Tiles...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    Directory.CreateDirectory(reliefTilesFolderTW.FullName);
++                    BreakDownImageAndSaveToDirectory(ResizeImage((Bitmap)ReconstructImageUsingReliefTiles(new DirectoryInfo(reliefTilesFolderTB.Text), resizedBitmap.Size), newSize), reliefTilesFolderTW);
++                }
++                if (centersFileTB.Text.Trim().Length > 0 && File.Exists(centersFileTB.Text))
++                {
++                    statusLabel.Text = "Processing Centers File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ScalePointsAndWriteResults(scaleRatio, centersFileTB.Text, centersFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                if (polygonsFileTB.Text.Trim().Length > 0 && File.Exists(polygonsFileTB.Text))
++                {
++                    statusLabel.Text = "Processing Polygons File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ScalePointsAndWriteResults(scaleRatio, polygonsFileTB.Text, polygonsFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                if (propertiesFileTB.Text.Trim().Length > 0 && File.Exists(propertiesFileTB.Text))
++                {
++                    statusLabel.Text = "Processing Properties File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    UpdateMapSizeAndWriteResults(resizedBitmap.Size, propertiesFileTB.Text, propertiesFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                resizedBitmap.Save(imageFileTW.Open(FileMode.Create, FileAccess.Write), System.Drawing.Imaging.ImageFormat.Png);
++                if (placementFileTB.Text.Trim().Length > 0 && File.Exists(placementFileTB.Text))
++                {
++                    statusLabel.Text = "Processing Placements File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ScalePointsAndWriteResults(scaleRatio, placementFileTB.Text, placementFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                if (namePlacementFileTB.Text.Trim().Length > 0 && File.Exists(namePlacementFileTB.Text))
++                {
++                    statusLabel.Text = "Processing Name Placements File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ScalePointsAndWriteResults(scaleRatio, namePlacementFileTB.Text, namePlacementFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                if (vcTB.Text.Trim().Length > 0 && File.Exists(vcTB.Text))
++                {
++                    statusLabel.Text = "Processing Victory Cities File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ScalePointsAndWriteResults(scaleRatio, vcTB.Text, victoryCitiesFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                if (ipcPlacementTB.Text.Trim().Length > 0 && File.Exists(ipcPlacementTB.Text))
++                {
++                    statusLabel.Text = "Processing Ipc Placements File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ScalePointsAndWriteResults(scaleRatio, ipcPlacementTB.Text, ipcPlacementFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                if (decorationsFileTB.Text.Trim().Length > 0 && File.Exists(decorationsFileTB.Text))
++                {
++                    statusLabel.Text = "Processing Decorations File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ScalePointsAndWriteResults(scaleRatio, decorationsFileTB.Text, decorationsFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                if (capitolsFileTB.Text.Trim().Length > 0 && File.Exists(capitolsFileTB.Text))
++                {
++                    statusLabel.Text = "Processing Capitols File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ScalePointsAndWriteResults(scaleRatio, capitolsFileTB.Text, capitolsFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                if (KamikazePlacementFileTB.Text.Trim().Length > 0 && File.Exists(KamikazePlacementFileTB.Text))
++                {
++                    statusLabel.Text = "Processing Kamikaze Placements File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ScalePointsAndWriteResults(scaleRatio, KamikazePlacementFileTB.Text, kamikazePlacementFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                MessageBox.Show("The map was successfully resized.", "Resizing Completed");
++            }
++            catch (ThreadAbortException ex) { return; }
++            catch (FileNotFoundException ex)
++            { MessageBox.Show("One of the files that was going to be processed does not exist. Cancelling resizing operation.", "File Not Found"); }
++            catch (Exception ex) { if (MessageBox.Show("An error occured when trying to resize the map. Do you want to view the error message?", "Error Resizing Map", MessageBoxButtons.YesNoCancel) == DialogResult.Yes) { exceptionViewerWindow.ShowInformationAboutException(ex, true); } }
++            StartAllowingEditing();
++            //catch { }
++        }
++
++        private Bitmap ResizeImage(Bitmap image, Size newSize)
++        {
++            Bitmap result = new Bitmap(newSize.Width, newSize.Height);
++            Graphics grphx = Graphics.FromImage(result);
++            if (useImageSmoothing.Checked)
++            {
++                grphx.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
++            }
++            else
++            {
++                grphx.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
++            }
++            grphx.DrawImage(image, new Rectangle(new Point(0, 0), newSize));
++            grphx.Dispose();
++            return result;
++        }
++        private Image ReconstructImageUsingReliefTiles(DirectoryInfo reliefTilesFolder, Size mapSize)
++        {
++            List<FileInfo> files = new List<FileInfo>(reliefTilesFolder.GetFiles());
++            List<FileInfo> images = new List<FileInfo>();
++            foreach (FileInfo cur in files)
++            {
++                if (cur.Extension.ToLower() == ".png")
++                {
++                    images.Add(cur);
++                }
++            }
++            Image fullImage = new Bitmap(mapSize.Width, mapSize.Height);
++            Graphics grphx = Graphics.FromImage(fullImage);
++            foreach (FileInfo image in images)
++            {
++                try
++                {
++                    int x = Convert.ToInt32(image.Name.Substring(0, image.Name.IndexOf("_")));
++                    int y = Convert.ToInt32(image.Name.Substring(image.Name.IndexOf("_") + 1, image.Name.Substring(image.Name.IndexOf("_") + 1).IndexOf(".")));
++                    Image imageToPaste = Image.FromFile(image.FullName);
++                    Point pasteLoc = new Point(x * 256, y * 256);
++                    grphx.DrawImage(imageToPaste, pasteLoc);
++                    imageToPaste.Dispose();
++                }
++                catch { }
++            }
++            return (Bitmap)fullImage;
++        }
++
++        private void StopAllowingEditing()
++        {
++            resizeMapFilesBTN.Text = "Cancel";
++            shiftMapFilesButton.Text = "Cancel";
++            groupBox1.Enabled = false;
++
++            tabControl1.Enabled = false;
++        }
++        private void StartAllowingEditing()
++        {
++            progressBar.Value = 0;
++            progressBar.Visible = true;
++            statusLabel.Text = "Ready...";
++            resizeMapFilesBTN.Text = "Resize Map Files";
++            shiftMapFilesButton.Text = "Shift Map Files";
++            radioButton1_CheckedChanged(new object(), new EventArgs());
++
++            groupBox1.Enabled = true;
++            tabControl1.Enabled = true;
++        }
++
++        private void UpdateMapSizeAndWriteResults(Size size, string readFileLocation, FileStream fileStream)
++        {
++            int index = 0;
++            string[] lines = File.ReadAllLines(readFileLocation);
++            StringBuilder textBuilder = new StringBuilder();
++            progressBar.Value = 0;
++            progressBar.Minimum = 0;
++            progressBar.Maximum = lines.Length;
++            progressBar.Visible = true;
++            int lineIndex = 0;
++            foreach (string line in lines)
++            {
++                while (pauseBackgroundThread)
++                    Thread.Sleep(250);
++                string text = line.Trim();
++                while (index < text.Length)
++                {
++                    string remainingTextToProcess = text.Substring(index);
++                    int indexOfSpace = remainingTextToProcess.IndexOf(" ");
++                    if (indexOfSpace <= 0)
++                    {
++                        textBuilder.AppendLine(GetEditedText(remainingTextToProcess,size));
++                        progressBar.Value = lineIndex + 1;
++                        break;
++                    }
++                    else
++                    {
++                        string cur = text.Substring(index, indexOfSpace);
++                        textBuilder.Append(GetEditedText(cur, size));
++                        index += cur.Length;
++                    }
++                }
++                index = 0;
++                lineIndex++;
++            }
++            progressBar.Value = 0;
++            byte[] bytes = Encoding.ASCII.GetBytes(textBuilder.ToString());
++            fileStream.Write(bytes, 0, bytes.Length);
++            fileStream.Close();
++        }
++
++        private string GetEditedText(string text,Size resizedMapSize)
++        {
++            if (text.Trim().ToLower().StartsWith("map.width="))
++            {
++                return "map.width=" + resizedMapSize.Width;
++            }
++            else if (text.Trim().ToLower().StartsWith("map.height="))
++            {
++                return "map.height=" + resizedMapSize.Height;
++            }
++            else
++                return text;
++        }
++        private void BreakDownImageAndSaveToDirectory(Image image, DirectoryInfo baseTilesFolderTW)
++        {
++            try
++            {
++                foreach (FileInfo cur in baseTilesFolderTW.GetFiles())
++                {
++                    try
++                    {
++                        cur.Delete();
++                    }
++                    catch { }
++                }
++            }
++            catch { }
++            int xSquarePosition = 0;
++            int ySquarePosition = 0;
++            progressBar.Value = 0;
++            progressBar.Minimum = 0;
++            progressBar.Maximum = ((image.Width / 256) + 1) * ((image.Height / 256) + 1);
++            progressBar.Visible = true;
++            while (xSquarePosition < image.Width)
++            {
++                while (ySquarePosition < image.Height)
++                {
++                    while (pauseBackgroundThread)
++                        Thread.Sleep(250);
++                    progressBar.Value++;
++                    Bitmap bitmap = new Bitmap(256, 256);
++                    Graphics graphics = Graphics.FromImage(bitmap);
++                    graphics.DrawImage(image, new Rectangle(0, 0, 256, 256), new Rectangle(xSquarePosition, ySquarePosition, 256, 256), GraphicsUnit.Pixel);
++                    Stream stream = File.Open(String.Concat(baseTilesFolderTW.FullName, @"\", (xSquarePosition / 256), "_", (ySquarePosition / 256), ".png"), FileMode.Create);
++                    bitmap.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
++                    bitmap.Dispose();
++                    stream.Close();
++                    stream.Dispose();
++                    graphics.Dispose();
++                    ySquarePosition += 256;
++                }
++                xSquarePosition += 256;
++                ySquarePosition = 0;
++            }
++        }
++        private int countdownToGCCollection = 100;
++        private void ScalePointsAndWriteResults(SizeF scaleRatio, string readFileLocation, FileStream fileStream)
++        {
++            progressBar.Visible = false;
++            string originalLabelText = statusLabel.Text;
++            int index = 0;
++            string text = File.ReadAllText(readFileLocation);
++            StringBuilder textBuilder = new StringBuilder();
++            int max = text.Length;
++            int value = 0;
++            countdownToGCCollection = 100;
++            while (index < text.Length)
++            {
++                while (pauseBackgroundThread)
++                    Thread.Sleep(250);
++                string remainingTextToProcess = text.Substring(index);
++                int indexOfPointEnd = remainingTextToProcess.IndexOf(")");
++                if (indexOfPointEnd <= 0)
++                {
++                    textBuilder.Append(remainingTextToProcess);
++                    statusLabel.Text = String.Concat(originalLabelText, " (", value, "/", max, ") - ", ((int)(((float)value / (float)max) * 100)).ToString(), "%");
++                    break;
++                }
++                else
++                {
++                    string cur = text.Substring(index, indexOfPointEnd + 1);
++                    textBuilder.Append(GetTransformedPointText(cur, scaleRatio));
++                    index += cur.Length;
++                    value += cur.Length;
++                    statusLabel.Text = String.Concat(originalLabelText, " (", value, "/", max, ") - ", ((int)(((float)value / (float)max) * 100)).ToString(), "%");
++                }
++                countdownToGCCollection--;
++                if (countdownToGCCollection <= 0)
++                {
++                    countdownToGCCollection = 100;
++                    GC.Collect();
++                }
++            }
++            byte[] bytes = Encoding.ASCII.GetBytes(textBuilder.ToString());
++            fileStream.Write(bytes, 0, bytes.Length);
++            fileStream.Close();
++        }
++        int indexOfPointStart;
++        private string GetTransformedPointText(string cur,SizeF scaleRatio)
++        {
++            indexOfPointStart = cur.IndexOf("(");
++            string prePointPart = cur.Substring(0,indexOfPointStart);
++            string pointPart = cur.Substring(indexOfPointStart + 1, cur.Length - (indexOfPointStart + 2));
++            Point oldPoint = new Point(Convert.ToInt32(pointPart.Substring(0, pointPart.IndexOf(","))), Convert.ToInt32(pointPart.Substring(pointPart.IndexOf(",") + 1)));
++            Point newPoint = new Point((int)(oldPoint.X * scaleRatio.Width), (int)(oldPoint.Y * scaleRatio.Height));
++            return String.Concat(prePointPart, "(", newPoint.X, ", ", newPoint.Y, ")");
++        }
++        private bool ValidateMapFilesAndFolders()
++        {
++            bool result = true;
++            if (mapFolderTB.Text.Trim().Length == 0)
++                result = false;
++            if (baseTilesFolderTB.Text.Trim().Length == 0)
++                result = false;
++            if (centersFileTB.Text.Trim().Length == 0)
++                result = false;
++            if (polygonsFileTB.Text.Trim().Length == 0)
++                result = false;
++            if (propertiesFileTB.Text.Trim().Length == 0)
++                result = false;
++            if (mapFolderTB.Text.Trim().Length > 0 && !Directory.Exists(mapFolderTB.Text))
++                result = false;
++            if (baseTilesFolderTB.Text.Trim().Length > 0 && !Directory.Exists(baseTilesFolderTB.Text))
++                result = false;
++            if (centersFileTB.Text.Trim().Length > 0 && !File.Exists(centersFileTB.Text))
++                result = false;
++            if (polygonsFileTB.Text.Trim().Length > 0 && !File.Exists(polygonsFileTB.Text))
++                result = false;
++            if (propertiesFileTB.Text.Trim().Length > 0 && !File.Exists(propertiesFileTB.Text))
++                result = false;
++            if (reliefTilesFolderTB.Text.Trim().Length > 0 && !Directory.Exists(reliefTilesFolderTB.Text))
++                result = false;
++            if (imageFileTB.Text.Trim().Length > 0 && !File.Exists(imageFileTB.Text))
++                result = false;
++            if (placementFileTB.Text.Trim().Length > 0 && !File.Exists(placementFileTB.Text))
++                result = false;
++            if (namePlacementFileTB.Text.Trim().Length > 0 && !File.Exists(namePlacementFileTB.Text))
++                result = false;
++            if (vcTB.Text.Trim().Length > 0 && !File.Exists(vcTB.Text))
++                result = false;
++            if (ipcPlacementTB.Text.Trim().Length > 0 && !File.Exists(ipcPlacementTB.Text))
++                result = false;
++            if (decorationsFileTB.Text.Trim().Length > 0 && !File.Exists(decorationsFileTB.Text))
++                result = false;
++            if (capitolsFileTB.Text.Trim().Length > 0 && !File.Exists(capitolsFileTB.Text))
++                result = false;
++            if (KamikazePlacementFileTB.Text.Trim().Length > 0 && !File.Exists(KamikazePlacementFileTB.Text))
++                result = false;
++            if (result == false)
++            {
++                if (MessageBox.Show("Not all of the required files have been supplied. The map may still be able to be processed, but it may result in an error. Do you want to proceed without all the suggested files?", "Files Not Supplied", MessageBoxButtons.YesNoCancel) == DialogResult.Yes)
++                    result = true;
++            }
++            return result;
++        }
++
++        private void radioButton1_CheckedChanged(object sender, EventArgs e)
++        {
++            mapScaleUPDOWN.Enabled = radioButton1.Checked;
++            mapSizeTB.Enabled = radioButton2.Checked;
++        }
++
++        private void Main_FormClosing(object sender, FormClosingEventArgs e)
++        {
++            PrepareForClose();
++        }
++
++        private void PrepareForClose()
++        {
++            GC.Collect();
++        }
++
++        private void baseTilesFolderTB_TextChanged(object sender, EventArgs e)
++        {
++            needToReconstructMapImage = true;
++        }
++
++        private void previewShiftedMapButton_Click(object sender, EventArgs e)
++        {
++            try
++            {
++                if (!ValidateMapFilesAndFolders())
++                {
++                    MessageBox.Show("Some of the map files and/or folders are invalid, do not exist, or are required and are not entered. The program cannot preview the shifted map until all the files and folders are valid.", "Invalid Files Or Folders");
++                    StartAllowingEditing();
++                    return;
++                }
++                if (!File.Exists(propertiesFileTB.Text))
++                {
++                    MessageBox.Show("Unable to recreate the map image from the base tiles bacause the map properties file is invalid or does not exist.", "Unable To Recreate Map Image");
++                    StartAllowingEditing();
++                    return;
++                }
++                Size oldSize = getMapSize(new FileInfo(propertiesFileTB.Text));
++                if (oldSize.Width == 0 || oldSize.Height == 0)
++                {
++                    MessageBox.Show("Unable to recreate the map image from the base tiles bacause the map properties file is invalid or does not exist.", "Unable To Recreate Map Image");
++                    StartAllowingEditing();
++                    return;
++                }
++                if (needToReconstructMapImage)
++                {
++                    needToReconstructMapImage = false;
++                    if (!Directory.Exists(baseTilesFolderTB.Text))
++                    {
++                        MessageBox.Show("Unable to recreate the map image from the base tiles bacause the base tiles folder is invalid or does not exist.", "Unable To Recreate Map Image");
++                        StartAllowingEditing();
++                        return;
++                    }
++                    reconstructedMapImage = ReconstructMapImageUsingBaseTiles(new DirectoryInfo(baseTilesFolderTB.Text), oldSize);
++                }
++                Size shiftingAmount = getShiftingAmount();
++                Size newSize = getShiftedSize(oldSize,shiftingAmount);
++                Bitmap resizedBitmap = new Bitmap(newSize.Width, newSize.Height);
++                Graphics grphx = Graphics.FromImage(resizedBitmap);
++                grphx.DrawImageUnscaled(reconstructedMapImage, new Rectangle(new Point(shiftingAmount.Width,shiftingAmount.Height), newSize));
++                mapPreviewWindow.DisplayImage(resizedBitmap);
++                grphx.Dispose();
++            }
++            catch (FileNotFoundException ex)
++            { MessageBox.Show("The map image file does not exist.", "File Not Found"); }
++            catch (Exception ex) { if (MessageBox.Show("An error occured when trying to preview the shifted map image. Do you want to view the error message?", "Error Previewing Resized Image", MessageBoxButtons.YesNoCancel) == DialogResult.Yes) { exceptionViewerWindow.ShowInformationAboutException(ex, true); } }
++            //catch { }
++        }
++
++        private Size getShiftingAmount()
++        {
++            return new Size(Convert.ToInt32(shiftingAmountTextbox.Text.Substring(0, shiftingAmountTextbox.Text.IndexOf(","))), Convert.ToInt32(shiftingAmountTextbox.Text.Substring(shiftingAmountTextbox.Text.IndexOf(",") + 1)));
++        }
++        private Size getShiftedSize(Size oldSize,Size shiftingAmount)
++        {
++            return new Size(oldSize.Width + shiftingAmount.Width, oldSize.Height + shiftingAmount.Height);
++        }
++        public void SetClipboardText(string clipboardText)
++        {
++            Clipboard.SetText(clipboardText);
++        }
++        private void shiftMapFilesButton_Click(object sender, EventArgs e)
++        {
++            if (shiftMapThread == null || !shiftMapThread.IsAlive)
++            {
++                if (!ValidateMapFilesAndFolders())
++                {
++                    MessageBox.Show("Some of the map files and/or folders are invalid, do not exist, or are required and are not entered. The program cannot shift the map until all the files and folders are valid.", "Invalid Files Or Folders");
++                    return;
++                }
++                StopAllowingEditing();
++                shiftMapThread = new Thread(shiftMapMethod);
++                shiftMapThread.IsBackground = true;
++                shiftMapThread.Priority = ThreadPriority.Normal;
++                shiftMapThread.Start();
++            }
++            else
++            {
++                pauseBackgroundThread = true;
++                if (MessageBox.Show("If you cancel the shifting of the map, you may need to restart the program for the shifting to work again. Are you sure you want to cancel the shifting of the map files and folders?", "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
++                {
++                    shiftMapThread.Abort();
++                    StartAllowingEditing();
++                    pauseBackgroundThread = false;
++                }
++                else
++                {
++                    pauseBackgroundThread = false;
++                }
++            }
++        }
++        bool pauseBackgroundThread = false;
++        Thread shiftMapThread;
++        public void shiftMapMethod()
++        {
++            try
++            {
++                if (!File.Exists(propertiesFileTB.Text))
++                {
++                    MessageBox.Show("Unable to recreate the map image from the base tiles bacause the map properties file is invalid or does not exist.", "Unable To Recreate Map Image");
++                    StartAllowingEditing();
++                    return;
++                }
++                Size oldSize = getMapSize(new FileInfo(propertiesFileTB.Text));
++                if (oldSize.Width == 0 || oldSize.Height == 0)
++                {
++                    MessageBox.Show("Unable to recreate the map image from the base tiles bacause the map properties file is invalid or does not exist.", "Unable To Recreate Map Image");
++                    StartAllowingEditing();
++                    return;
++                }
++                if (needToReconstructMapImage)
++                {
++                    needToReconstructMapImage = false;
++                    if (!Directory.Exists(baseTilesFolderTB.Text))
++                    {
++                        MessageBox.Show("Unable to recreate the map image from the base tiles bacause the base tiles folder is invalid or does not exist.", "Unable To Recreate Map Image");
++                        StartAllowingEditing();
++                        return;
++                    }
++                    reconstructedMapImage = ReconstructMapImageUsingBaseTiles(new DirectoryInfo(baseTilesFolderTB.Text), oldSize);
++                }
++                Size shiftingAmount = getShiftingAmount();
++                Size newSize = getShiftedSize(oldSize, shiftingAmount);
++                Bitmap resizedBitmap = ShiftImage(reconstructedMapImage, shiftingAmount);
++                DialogResult result = MessageBox.Show("Do you want to overwrite the original map data with the shifted files and folders?", "Overwrite Map Files", MessageBoxButtons.YesNoCancel);
++                DirectoryInfo mapFolderTW;
++                if (result == DialogResult.Yes)
++                {
++                    mapFolderTW = new DirectoryInfo(mapFolderTB.Text);
++                }
++                else if (result == DialogResult.No)
++                {
++                    mapFolderTW = new DirectoryInfo(mapFolderTB.Text + @"\Shifted Map Files");
++                }
++                else
++                {
++                    StartAllowingEditing();
++                    statusLabel.Text = "Ready...";
++                    progressBar.Value = 0;
++                    return;
++                }
++                DirectoryInfo baseTilesFolderTW = new DirectoryInfo(mapFolderTW.FullName + @"\baseTiles");
++                FileInfo centersFileTW = new FileInfo(mapFolderTW.FullName + @"\centers.txt");
++                FileInfo polygonsFileTW = new FileInfo(mapFolderTW.FullName + @"\polygons.txt");
++                FileInfo propertiesFileTW = new FileInfo(mapFolderTW.FullName + @"\map.properties");
++                DirectoryInfo reliefTilesFolderTW = new DirectoryInfo(mapFolderTW.FullName + @"\reliefTiles");
++                FileInfo imageFileTW = new FileInfo(mapFolderTW.FullName + @"\resizedMapImage.png");
++                FileInfo placementFileTW = new FileInfo(mapFolderTW.FullName + @"\place.txt");
++                FileInfo namePlacementFileTW = new FileInfo(mapFolderTW.FullName + @"\name_place.txt");
++                FileInfo victoryCitiesFileTW = new FileInfo(mapFolderTW.FullName + @"\vc.txt");
++                FileInfo ipcPlacementFileTW = new FileInfo(mapFolderTW.FullName + @"\ipc_place.txt");
++                FileInfo decorationsFileTW = new FileInfo(mapFolderTW.FullName + @"\decorations.txt");
++                FileInfo capitolsFileTW = new FileInfo(mapFolderTW.FullName + @"\capitols.txt");
++                FileInfo kamikazePlacementFileTW = new FileInfo(mapFolderTW.FullName + @"\kamikaze_place.txt");
++
++                Directory.CreateDirectory(mapFolderTW.FullName);
++                if (baseTilesFolderTB.Text.Trim().Length > 0 && Directory.Exists(baseTilesFolderTB.Text))
++                {
++                    statusLabel.Text = "Processing Base Tiles...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    Directory.CreateDirectory(baseTilesFolderTW.FullName);
++                    BreakDownImageAndSaveToDirectory(resizedBitmap, baseTilesFolderTW);
++                }
++                if (reliefTilesFolderTB.Text.Trim().Length > 0 && Directory.Exists(reliefTilesFolderTB.Text))
++                {
++                    statusLabel.Text = "Processing Relief Tiles...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    Directory.CreateDirectory(reliefTilesFolderTW.FullName);
++                    BreakDownImageAndSaveToDirectory(ShiftImage((Bitmap)ReconstructImageUsingReliefTiles(new DirectoryInfo(reliefTilesFolderTB.Text), oldSize), shiftingAmount), reliefTilesFolderTW);
++                }
++                if (centersFileTB.Text.Trim().Length > 0 && File.Exists(centersFileTB.Text))
++                {
++                    statusLabel.Text = "Processing Centers File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ShiftPointsAndWriteResults(shiftingAmount, centersFileTB.Text, centersFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                if (polygonsFileTB.Text.Trim().Length > 0 && File.Exists(polygonsFileTB.Text))
++                {
++                    statusLabel.Text = "Processing Polygons File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    if(shiftingAmount.Width < 0 || shiftingAmount.Height < 0)
++                        ShiftPolygonPointsAndWriteResults(shiftingAmount, polygonsFileTB.Text, polygonsFileTW.Open(FileMode.Create, FileAccess.Write),new Rectangle(0,0,newSize.Width,newSize.Height));
++                    else
++                        ShiftPointsAndWriteResults(shiftingAmount, polygonsFileTB.Text, polygonsFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                if (propertiesFileTB.Text.Trim().Length > 0 && File.Exists(propertiesFileTB.Text))
++                {
++                    statusLabel.Text = "Processing Properties File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    UpdateMapSizeAndWriteResults(resizedBitmap.Size, propertiesFileTB.Text, propertiesFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                resizedBitmap.Save(imageFileTW.Open(FileMode.Create, FileAccess.Write), System.Drawing.Imaging.ImageFormat.Png);
++                if (placementFileTB.Text.Trim().Length > 0 && File.Exists(placementFileTB.Text))
++                {
++                    statusLabel.Text = "Processing Placements File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ShiftPointsAndWriteResults(shiftingAmount, placementFileTB.Text, placementFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                if (namePlacementFileTB.Text.Trim().Length > 0 && File.Exists(namePlacementFileTB.Text))
++                {
++                    statusLabel.Text = "Processing Name Placements File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ShiftPointsAndWriteResults(shiftingAmount, namePlacementFileTB.Text, namePlacementFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                if (vcTB.Text.Trim().Length > 0 && File.Exists(vcTB.Text))
++                {
++                    statusLabel.Text = "Processing Victory Cities File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ShiftPointsAndWriteResults(shiftingAmount, vcTB.Text, victoryCitiesFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                if (ipcPlacementTB.Text.Trim().Length > 0 && File.Exists(ipcPlacementTB.Text))
++                {
++                    statusLabel.Text = "Processing Ipc Placements File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ShiftPointsAndWriteResults(shiftingAmount, ipcPlacementTB.Text, ipcPlacementFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                if (decorationsFileTB.Text.Trim().Length > 0 && File.Exists(decorationsFileTB.Text))
++                {
++                    statusLabel.Text = "Processing Decorations File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ShiftPointsAndWriteResults(shiftingAmount, decorationsFileTB.Text, decorationsFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                if (capitolsFileTB.Text.Trim().Length > 0 && File.Exists(capitolsFileTB.Text))
++                {
++                    statusLabel.Text = "Processing Capitols File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ShiftPointsAndWriteResults(shiftingAmount, capitolsFileTB.Text, capitolsFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                if (KamikazePlacementFileTB.Text.Trim().Length > 0 && File.Exists(KamikazePlacementFileTB.Text))
++                {
++                    statusLabel.Text = "Processing Kamikaze Placements File...";
++                    statusLabel.Invalidate();
++                    statusStrip1.Update();
++                    ShiftPointsAndWriteResults(shiftingAmount, KamikazePlacementFileTB.Text, kamikazePlacementFileTW.Open(FileMode.Create, FileAccess.Write));
++                }
++                MessageBox.Show("The map was successfully shifted.", "Shifting Completed");
++            }
++            catch (ThreadAbortException ex) { return; }
++            catch (FileNotFoundException ex)
++            { MessageBox.Show("One of the files that was going to be processed does not exist. Cancelling resizing operation.", "File Not Found"); }
++            catch (Exception ex) { if (MessageBox.Show("An error occured when trying to shift the map. Do you want to view the error message?", "Error Resizing Map", MessageBoxButtons.YesNoCancel) == DialogResult.Yes) { exceptionViewerWindow.ShowInformationAboutException(ex, true); } }
++            StartAllowingEditing();
++            //catch { }
++        }
++        private Bitmap ShiftImage(Bitmap image, Size shiftingAmount)
++        {
++            Bitmap result = new Bitmap(image.Width + shiftingAmount.Width, image.Height + shiftingAmount.Height);
++            Graphics grphx = Graphics.FromImage(result);
++            grphx.DrawImageUnscaled(image, new Point(shiftingAmount.Width, shiftingAmount.Height));
++            grphx.Dispose();
++            return result;
++        }
++        private void ShiftPointsAndWriteResults(Size shiftingAmount, string readFileLocation, FileStream fileStream)
++        {
++            progressBar.Visible = false;
++            string originalLabelText = statusLabel.Text;
++            int index = 0;
++            string text = File.ReadAllText(readFileLocation);
++            StringBuilder textBuilder = new StringBuilder();
++            int max = text.Length;
++            int value = 0;
++            countdownToGCCollection = 100;
++            while (index < text.Length)
++            {
++                while (pauseBackgroundThread)
++                    Thread.Sleep(250);
++                string remainingTextToProcess = text.Substring(index);
++                int indexOfPointEnd = remainingTextToProcess.IndexOf(")");
++                if (indexOfPointEnd <= 0)
++                {
++                    textBuilder.Append(remainingTextToProcess);
++                    statusLabel.Text = String.Concat(originalLabelText, " (", value, "/", max, ") - ", ((int)(((float)value / (float)max) * 100)).ToString(), "%");
++                    break;
++                }
++                else
++                {
++                    string cur = text.Substring(index, indexOfPointEnd + 1);
++                    textBuilder.Append(GetShiftedPointText(cur, shiftingAmount));
++                    index += cur.Length;
++                    value += cur.Length;
++                    statusLabel.Text = String.Concat(originalLabelText, " (", value, "/", max, ") - ", ((int)(((float)value / (float)max) * 100)).ToString(), "%");
++                }
++                countdownToGCCollection--;
++                if (countdownToGCCollection <= 0)
++                {
++                    countdownToGCCollection = 100;
++                    GC.Collect();
++                }
++            }
++            byte[] bytes = Encoding.ASCII.GetBytes(textBuilder.ToString());
++            fileStream.Write(bytes, 0, bytes.Length);
++            fileStream.Close();
++        }
++        private void ShiftPolygonPointsAndWriteResults(Size shiftingAmount, string readFileLocation, FileStream fileStream, Rectangle mapRectangle)
++        {
++            progressBar.Visible = false;
++            string originalLabelText = statusLabel.Text;
++            string[] lines = File.ReadAllLines(readFileLocation);
++            List<string> territoriesGone = new List<string>();
++            StringBuilder mainTextBuilder = new StringBuilder();
++            int length = 0;
++            foreach (string cur in lines)
++                length += cur.Length;
++            int max = length;
++            int value = 0;
++            foreach (string text in lines)
++            {
++                StringBuilder textBuilder = new StringBuilder();
++                int index = 0;
++                List<Point> points = new List<Point>();
++                List<byte> extras = new List<byte>();
++                while (index < text.Length)
++                {
++                    while (pauseBackgroundThread)
++                        Thread.Sleep(250);
++                    string remainingTextToProcess = text.Substring(index);
++                    int indexOfPointEnd = remainingTextToProcess.IndexOf(")");
++                    if (indexOfPointEnd <= 0)
++                    {
++                        textBuilder.Append(remainingTextToProcess);
++                        statusLabel.Text = String.Concat(originalLabelText, " (", value, "/", max,") - ",((int)(((float)value / (float)max) * 100)).ToString(),"%");
++                        break;
++                    }
++                    else
++                    {
++                        string cur = text.Substring(index, indexOfPointEnd + 1);
++                        string shiftedPointText = GetShiftedPointText(cur, shiftingAmount);
++                        textBuilder.Append(shiftedPointText);
++                        points.Add(new Point(Convert.ToInt32(shiftedPointText.Substring(shiftedPointText.IndexOf("(") + 1, shiftedPointText.Substring(shiftedPointText.IndexOf("(") + 1).IndexOf(","))), Convert.ToInt32(shiftedPointText.Substring(shiftedPointText.IndexOf(",")+ 1, shiftedPointText.Substring(shiftedPointText.IndexOf(",")+ 1).IndexOf(")")))));
++                        extras.Add(1);
++                        index += cur.Length;
++                        value += cur.Length;
++                        statusLabel.Text = String.Concat(originalLabelText, " (", value, "/", max, ") - ", ((int)(((float)value / (float)max) * 100)).ToString(), "%");
++                    }
++                }
++                string textBuilderString = textBuilder.ToString();
++                if (!new GraphicsPath(points.ToArray(),extras.ToArray(),FillMode.Alternate).GetBounds().IntersectsWith(mapRectangle))
++                {   
++                    territoriesGone.Add(textBuilderString.Substring(0, textBuilderString.IndexOf("<")).Trim());
++                }
++                else
++                {
++                    mainTextBuilder.Append(textBuilderString);
++                    mainTextBuilder.Append("\r\n");
++                }
++                countdownToGCCollection--;
++                if (countdownToGCCollection <= 0)
++                {
++                    countdownToGCCollection = 100;
++                    GC.Collect();
++                }
++            }
++            byte[] bytes = Encoding.ASCII.GetBytes(mainTextBuilder.ToString());
++            fileStream.Write(bytes, 0, bytes.Length);
++            fileStream.Close();
++            if(territoriesGone.Count > 0)
++            {
++                StringBuilder builder = new StringBuilder("The following territories were pushed off the map when the map was shifted: ");
++                foreach(string terr in territoriesGone)
++                {
++                    builder.Append(terr);
++                    builder.Append(", ");
++                }
++                builder.Remove(builder.Length - 2,2);
++                builder.Append(" Please remove these territories from the game's xml file, centers file, etc. to make sure the game will run in TripleA.");
++                MessageBox.Show(builder.ToString(), "Territories Shifted Off Map");
++            }
++        }
++        private string GetShiftedPointText(string cur, Size shiftingAmount)
++        {
++            indexOfPointStart = cur.IndexOf("(");
++            string prePointPart = cur.Substring(0, indexOfPointStart);
++            string pointPart = cur.Substring(indexOfPointStart + 1, cur.Length - (indexOfPointStart + 2));
++            Point oldPoint = new Point(Convert.ToInt32(pointPart.Substring(0, pointPart.IndexOf(","))), Convert.ToInt32(pointPart.Substring(pointPart.IndexOf(",") + 1)));
++            Point newPoint = new Point((oldPoint.X + shiftingAmount.Width > 0 ? oldPoint.X + shiftingAmount.Width : 0), (oldPoint.Y + shiftingAmount.Height > 0 ? oldPoint.Y + shiftingAmount.Height : 0));
++            return String.Concat(prePointPart, "(", newPoint.X, ", ", newPoint.Y, ")");
++        }
++
++        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
++        {
++            if (tabControl1.SelectedIndex == 0)
++                resizeMapFilesBTN.BringToFront();
++            else if (tabControl1.SelectedIndex == 1)
++                shiftMapFilesButton.BringToFront();
++        }
++    }
++}
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Main.resxDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Main.resx
+@@ -0,0 +1,169 @@
++<?xml version="1.0" encoding="utf-8"?>
++<root>
++  <!-- 
++    Microsoft ResX Schema 
++    
++    Version 2.0
++    
++    The primary goals of this format is to allow a simple XML format 
++    that is mostly human readable. The generation and parsing of the 
++    various data types are done through the TypeConverter classes 
++    associated with the data types.
++    
++    Example:
++    
++    ... ado.net/XML headers & schema ...
++    <resheader name="resmimetype">text/microsoft-resx</resheader>
++    <resheader name="version">2.0</resheader>
++    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
++    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
++    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
++    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
++    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
++        <value>[base64 mime encoded serialized .NET Framework object]</value>
++    </data>
++    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
++        <comment>This is a comment</comment>
++    </data>
++                
++    There are any number of "resheader" rows that contain simple 
++    name/value pairs.
++    
++    Each data row contains a name, and value. The row also contains a 
++    type or mimetype. Type corresponds to a .NET class that support 
++    text/value conversion through the TypeConverter architecture. 
++    Classes that don't support this are serialized and stored with the 
++    mimetype set.
++    
++    The mimetype is used for serialized objects, and tells the 
++    ResXResourceReader how to depersist the object. This is currently not 
++    extensible. For a given mimetype the value must be set accordingly:
++    
++    Note - application/x-microsoft.net.object.binary.base64 is the format 
++    that the ResXResourceWriter will generate, however the reader can 
++    read any of the formats listed below.
++    
++    mimetype: application/x-microsoft.net.object.binary.base64
++    value   : The object must be serialized with 
++            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
++            : and then encoded with base64 encoding.
++    
++    mimetype: application/x-microsoft.net.object.soap.base64
++    value   : The object must be serialized with 
++            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
++            : and then encoded with base64 encoding.
++
++    mimetype: application/x-microsoft.net.object.bytearray.base64
++    value   : The object must be serialized into a byte array 
++            : using a System.ComponentModel.TypeConverter
++            : and then encoded with base64 encoding.
++    -->
++  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
++    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
++    <xsd:element name="root" msdata:IsDataSet="true">
++      <xsd:complexType>
++        <xsd:choice maxOccurs="unbounded">
++          <xsd:element name="metadata">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" />
++              </xsd:sequence>
++              <xsd:attribute name="name" use="required" type="xsd:string" />
++              <xsd:attribute name="type" type="xsd:string" />
++              <xsd:attribute name="mimetype" type="xsd:string" />
++              <xsd:attribute ref="xml:space" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="assembly">
++            <xsd:complexType>
++              <xsd:attribute name="alias" type="xsd:string" />
++              <xsd:attribute name="name" type="xsd:string" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="data">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
++                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
++              </xsd:sequence>
++              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
++              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
++              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
++              <xsd:attribute ref="xml:space" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="resheader">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
++              </xsd:sequence>
++              <xsd:attribute name="name" type="xsd:string" use="required" />
++            </xsd:complexType>
++          </xsd:element>
++        </xsd:choice>
++      </xsd:complexType>
++    </xsd:element>
++  </xsd:schema>
++  <resheader name="resmimetype">
++    <value>text/microsoft-resx</value>
++  </resheader>
++  <resheader name="version">
++    <value>2.0</value>
++  </resheader>
++  <resheader name="reader">
++    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
++  </resheader>
++  <resheader name="writer">
++    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
++  </resheader>
++  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
++    <value>17, 7</value>
++  </metadata>
++  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
++    <value>36</value>
++  </metadata>
++  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
++  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        AAABAAEAICAAAAwACACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAgAQAAAAAAAAAAAAAAAAAAAAA
++        AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAMDcwADwyqYAACBAAAAgYAAAIIAAACCgAAAg
++        wAAAIOAAAEAAAABAIAAAQEAAAEBgAABAgAAAQKAAAEDAAABA4AAAYAAAAGAgAABgQAAAYGAAAGCAAABg
++        oAAAYMAAAGDgAACAAAAAgCAAAIBAAACAYAAAgIAAAICgAACAwAAAgOAAAKAAAACgIAAAoEAAAKBgAACg
++        gAAAoKAAAKDAAACg4AAAwAAAAMAgAADAQAAAwGAAAMCAAADAoAAAwMAAAMDgAADgAAAA4CAAAOBAAADg
++        YAAA4IAAAOCgAADgwAAA4OAAQAAAAEAAIABAAEAAQABgAEAAgABAAKAAQADAAEAA4ABAIAAAQCAgAEAg
++        QABAIGAAQCCAAEAgoABAIMAAQCDgAEBAAABAQCAAQEBAAEBAYABAQIAAQECgAEBAwABAQOAAQGAAAEBg
++        IABAYEAAQGBgAEBggABAYKAAQGDAAEBg4ABAgAAAQIAgAECAQABAgGAAQICAAECAoABAgMAAQIDgAECg
++        AABAoCAAQKBAAECgYABAoIAAQKCgAECgwABAoOAAQMAAAEDAIABAwEAAQMBgAEDAgABAwKAAQMDAAEDA
++        4ABA4AAAQOAgAEDgQABA4GAAQOCAAEDgoABA4MAAQODgAIAAAACAACAAgABAAIAAYACAAIAAgACgAIAA
++        wACAAOAAgCAAAIAgIACAIEAAgCBgAIAggACAIKAAgCDAAIAg4ACAQAAAgEAgAIBAQACAQGAAgECAAIBA
++        oACAQMAAgEDgAIBgAACAYCAAgGBAAIBgYACAYIAAgGCgAIBgwACAYOAAgIAAAICAIACAgEAAgIBgAICA
++        gACAgKAAgIDAAICA4ACAoAAAgKAgAICgQACAoGAAgKCAAICgoACAoMAAgKDgAIDAAACAwCAAgMBAAIDA
++        YACAwIAAgMCgAIDAwACAwOAAgOAAAIDgIACA4EAAgOBgAIDggACA4KAAgODAAIDg4ADAAAAAwAAgAMAA
++        QADAAGAAwACAAMAAoADAAMAAwADgAMAgAADAICAAwCBAAMAgYADAIIAAwCCgAMAgwADAIOAAwEAAAMBA
++        IADAQEAAwEBgAMBAgADAQKAAwEDAAMBA4ADAYAAAwGAgAMBgQADAYGAAwGCAAMBgoADAYMAAwGDgAMCA
++        AADAgCAAwIBAAMCAYADAgIAAwICgAMCAwADAgOAAwKAAAMCgIADAoEAAwKBgAMCggADAoKAAwKDAAMCg
++        4ADAwAAAwMAgAMDAQADAwGAAwMCAAMDAoADw+/8ApKCgAICAgAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
++        AAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwACAgICAgICAgICAgICAgIA4ODg
++        4ODg4ODgAGRkAABkAAICAgICAgICAgICAgICAgDg4ODg4ODg4OAAZGQAAGQAAgICAgICAgICAgICAgIA
++        4ODg4ODg4ODgAABkZAAAZAACAgICAgICAgICAgICAODg4ODg4ODg4OAAZGRkAABkAAICAgICAgICAgIC
++        AgAA4ODg4ODg4ODg4ABkZGQAAGQAAgICAgICAgICAgIAAODg4ODg4ODg4ODgAABkZAAAZAAAAgICAgIC
++        AAAAAODg4ODg4ODg4ODg4ODgAGRkAABkZAACAgIAAADg4ODg4ODg4AAAAODg4ODg4OAAZGQAAGRkAAIC
++        AgDg4ODg4ODg4AAAAAICAODg4ODg4ABkZAAAZGQAAgIAAODg4ODgAAAAAAICAgIAAODg4ODgAGRkAABk
++        ZAACAgDg4ODgAAAAAgICAgICAgIA4ODg4OAAZGQAAGRkAAAAAODg4OAAAgICAgICAgICAgAAAODg4ABk
++        ZAAAZGQA4ODg4ODg4AACAgICAgICAgICAgIA4ODgAGRkAABkZADg4ODg4ODgAAAAAgICAgICAgICAgDg
++        4OAAZGQAAGRkAODg4ODg4ODg4AAAAAACAgICAgICAODg4ABkZAAAZGQA4ODgAAAAAODg4ODg4AAAAgIC
++        AgIA4ODgAGRkAABkZADg4OAAAgIAAODg4ODg4AAAAgICAADg4OAAZGQAAGRkAODg4AACAgIA4ODg4ODg
++        4AAAAgAA4ODg4ABkZAAAZGQA4ODgAAICAgIA4ODg4ODg4OAAAODg4ODgAGRkAABkZADg4OAAAAICAgDg
++        4ODg4ODg4ODg4ODg4OAAZGQAAGRkAODg4OAAAgICAODg4ODg4ODg4ODg4ODg4AAAZAAAZGQA4ODg4AAA
++        AAAA4ODg4AAAAAAAAOAAAAAA4ABkAABkZADg4ODg4ODg4ODg4OAAAAICAgIAAAACAgDgAGQAAGRkAODg
++        4ODg4ODg4ODg4AACAgICAgICAgICAgAAZAAAZGQAAODg4ODg4ODg4ODgAAICAgICAgICAgICAgBkAABk
++        ZGQA4ODg4ODg4ODg4OAAAgICAgICAgICAgICAGQAAGRkZADg4ODg4ODg4ODg4OAAAgICAgICAgICAgIA
++        ZAAAZGQAAODg4ODg4ODg4ODg4AAAAAAAAgICAgICAgBkAABkZADg4ODg4ODg4ODg4ODg4ODg4AAAAgIC
++        AgICAGQAAGRkAODg4ODg4ODg4ODg4ODg4ODg4OAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
++        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
++        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
++        AAAAAAAAAAAAAAAAAAAAAAAA
++</value>
++  </data>
++</root>
+\ No newline at end of file
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/MapPreviewWindow.Designer.csDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/MapPreviewWindow.Designer.cs
+@@ -0,0 +1,78 @@
++﻿using System.Windows.Forms;
++namespace TripleA_Map_Resizer
++{
++    partial class MapPreviewWindow
++    {
++        /// <summary>
++        /// Required designer variable.
++        /// </summary>
++        private System.ComponentModel.IContainer components = null;
++
++        /// <summary>
++        /// Clean up any resources being used.
++        /// </summary>
++        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
++        protected override void Dispose(bool disposing)
++        {
++            if (disposing && (components != null))
++            {
++                components.Dispose();
++            }
++            base.Dispose(disposing);
++        }
++
++        #region Windows Form Designer generated code
++
++        /// <summary>
++        /// Required method for Designer support - do not modify
++        /// the contents of this method with the code editor.
++        /// </summary>
++        private void InitializeComponent()
++        {
++            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MapPreviewWindow));
++            this.drawPanel = new DrawingPanel();
++            this.SuspendLayout();
++            // 
++            // drawPanel
++            // 
++            this.drawPanel.BackColor = System.Drawing.SystemColors.ControlLight;
++            this.drawPanel.Location = new System.Drawing.Point(0, 0);
++            this.drawPanel.Name = "drawPanel";
++            this.drawPanel.Size = new System.Drawing.Size(200, 100);
++            this.drawPanel.TabIndex = 0;
++            this.drawPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMove);
++            this.drawPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDown);
++            this.drawPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUp);
++            // 
++            // MapPreviewWindow
++            // 
++            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
++            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
++            this.AutoScroll = true;
++            this.ClientSize = new System.Drawing.Size(642, 516);
++            this.Controls.Add(this.drawPanel);
++            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
++            this.Name = "MapPreviewWindow";
++            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
++            this.Text = "Map Preview Window";
++            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
++            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MapPreviewWindow_FormClosing);
++            this.ResumeLayout(false);
++
++        }
++
++        #endregion
++
++        private DrawingPanel drawPanel;
++    }
++    public class DrawingPanel : Panel
++    {
++        public DrawingPanel()
++        {
++            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
++            this.SetStyle(ControlStyles.UserPaint, true);
++            this.SetStyle(ControlStyles.DoubleBuffer, true);
++            this.UpdateStyles();
++        }
++    }
++}
+\ No newline at end of file
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/MapPreviewWindow.csDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/MapPreviewWindow.cs
+@@ -0,0 +1,78 @@
++﻿using System;
++using System.Collections.Generic;
++using System.ComponentModel;
++using System.Data;
++using System.Drawing;
++using System.Text;
++using System.Windows.Forms;
++
++namespace TripleA_Map_Resizer
++{
++    public partial class MapPreviewWindow : Form
++    {
++        public MapPreviewWindow()
++        {
++            InitializeComponent();
++            MouseDown += new MouseEventHandler(mouseDown);
++            MouseMove += new MouseEventHandler(mouseMove);
++            MouseUp += new MouseEventHandler(mouseUp);
++            this.Cursor = Cursors.Hand;
++            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
++            this.UpdateStyles();
++        }
++
++        private void MapPreviewWindow_FormClosing(object sender, FormClosingEventArgs e)
++        {
++            e.Cancel = true;
++            Hide();
++        }
++        protected override void OnPaint(PaintEventArgs e)
++        {
++            //base.OnPaint(e);
++        }
++        protected override void OnPaintBackground(PaintEventArgs e)
++        {
++            if (!down)
++                base.OnPaintBackground(e);
++        }
++        public void DisplayImage(Image image)
++        {
++            drawPanel.BackgroundImage = image;
++            drawPanel.BackgroundImageLayout = ImageLayout.None;
++            drawPanel.Size = image.Size;
++            this.Show();
++        }
++        bool down = false;
++        Point omLocation = new Point();
++        Point oLocation = new Point();
++        private void mouseDown(object sender, MouseEventArgs e)
++        {
++            if (e.Button == MouseButtons.Right)
++            {
++                omLocation = new Point(Main.MousePosition.X, Main.MousePosition.Y);
++                oLocation = new Point(-this.AutoScrollPosition.X, -this.AutoScrollPosition.Y);
++                down = true;
++                //this.Cursor = Cursors.Hand;
++            }
++        }
++
++        private void mouseMove(object sender, MouseEventArgs e)
++        {
++            if (e.Button == MouseButtons.Right)
++            {
++                if (down)
++                {
++                    this.AutoScrollPosition = new Point(oLocation.X + omLocation.X - Main.MousePosition.X, oLocation.Y + omLocation.Y - Main.MousePosition.Y);
++                }
++            }
++        }
++        private void mouseUp(object sender, MouseEventArgs e)
++        {
++            if (e.Button == MouseButtons.Right)
++            {
++                down = false;
++                //this.Cursor = Cursors.Default;
++            }
++        }
++    }
++}
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/MapPreviewWindow.resxDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/MapPreviewWindow.resx
+@@ -0,0 +1,163 @@
++<?xml version="1.0" encoding="utf-8"?>
++<root>
++  <!-- 
++    Microsoft ResX Schema 
++    
++    Version 2.0
++    
++    The primary goals of this format is to allow a simple XML format 
++    that is mostly human readable. The generation and parsing of the 
++    various data types are done through the TypeConverter classes 
++    associated with the data types.
++    
++    Example:
++    
++    ... ado.net/XML headers & schema ...
++    <resheader name="resmimetype">text/microsoft-resx</resheader>
++    <resheader name="version">2.0</resheader>
++    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
++    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
++    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
++    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
++    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
++        <value>[base64 mime encoded serialized .NET Framework object]</value>
++    </data>
++    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
++        <comment>This is a comment</comment>
++    </data>
++                
++    There are any number of "resheader" rows that contain simple 
++    name/value pairs.
++    
++    Each data row contains a name, and value. The row also contains a 
++    type or mimetype. Type corresponds to a .NET class that support 
++    text/value conversion through the TypeConverter architecture. 
++    Classes that don't support this are serialized and stored with the 
++    mimetype set.
++    
++    The mimetype is used for serialized objects, and tells the 
++    ResXResourceReader how to depersist the object. This is currently not 
++    extensible. For a given mimetype the value must be set accordingly:
++    
++    Note - application/x-microsoft.net.object.binary.base64 is the format 
++    that the ResXResourceWriter will generate, however the reader can 
++    read any of the formats listed below.
++    
++    mimetype: application/x-microsoft.net.object.binary.base64
++    value   : The object must be serialized with 
++            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
++            : and then encoded with base64 encoding.
++    
++    mimetype: application/x-microsoft.net.object.soap.base64
++    value   : The object must be serialized with 
++            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
++            : and then encoded with base64 encoding.
++
++    mimetype: application/x-microsoft.net.object.bytearray.base64
++    value   : The object must be serialized into a byte array 
++            : using a System.ComponentModel.TypeConverter
++            : and then encoded with base64 encoding.
++    -->
++  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
++    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
++    <xsd:element name="root" msdata:IsDataSet="true">
++      <xsd:complexType>
++        <xsd:choice maxOccurs="unbounded">
++          <xsd:element name="metadata">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" />
++              </xsd:sequence>
++              <xsd:attribute name="name" use="required" type="xsd:string" />
++              <xsd:attribute name="type" type="xsd:string" />
++              <xsd:attribute name="mimetype" type="xsd:string" />
++              <xsd:attribute ref="xml:space" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="assembly">
++            <xsd:complexType>
++              <xsd:attribute name="alias" type="xsd:string" />
++              <xsd:attribute name="name" type="xsd:string" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="data">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
++                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
++              </xsd:sequence>
++              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
++              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
++              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
++              <xsd:attribute ref="xml:space" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="resheader">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
++              </xsd:sequence>
++              <xsd:attribute name="name" type="xsd:string" use="required" />
++            </xsd:complexType>
++          </xsd:element>
++        </xsd:choice>
++      </xsd:complexType>
++    </xsd:element>
++  </xsd:schema>
++  <resheader name="resmimetype">
++    <value>text/microsoft-resx</value>
++  </resheader>
++  <resheader name="version">
++    <value>2.0</value>
++  </resheader>
++  <resheader name="reader">
++    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
++  </resheader>
++  <resheader name="writer">
++    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
++  </resheader>
++  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
++  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        AAABAAEAICAAAAwACACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAgAQAAAAAAAAAAAAAAAAAAAAA
++        AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAMDcwADwyqYAACBAAAAgYAAAIIAAACCgAAAg
++        wAAAIOAAAEAAAABAIAAAQEAAAEBgAABAgAAAQKAAAEDAAABA4AAAYAAAAGAgAABgQAAAYGAAAGCAAABg
++        oAAAYMAAAGDgAACAAAAAgCAAAIBAAACAYAAAgIAAAICgAACAwAAAgOAAAKAAAACgIAAAoEAAAKBgAACg
++        gAAAoKAAAKDAAACg4AAAwAAAAMAgAADAQAAAwGAAAMCAAADAoAAAwMAAAMDgAADgAAAA4CAAAOBAAADg
++        YAAA4IAAAOCgAADgwAAA4OAAQAAAAEAAIABAAEAAQABgAEAAgABAAKAAQADAAEAA4ABAIAAAQCAgAEAg
++        QABAIGAAQCCAAEAgoABAIMAAQCDgAEBAAABAQCAAQEBAAEBAYABAQIAAQECgAEBAwABAQOAAQGAAAEBg
++        IABAYEAAQGBgAEBggABAYKAAQGDAAEBg4ABAgAAAQIAgAECAQABAgGAAQICAAECAoABAgMAAQIDgAECg
++        AABAoCAAQKBAAECgYABAoIAAQKCgAECgwABAoOAAQMAAAEDAIABAwEAAQMBgAEDAgABAwKAAQMDAAEDA
++        4ABA4AAAQOAgAEDgQABA4GAAQOCAAEDgoABA4MAAQODgAIAAAACAACAAgABAAIAAYACAAIAAgACgAIAA
++        wACAAOAAgCAAAIAgIACAIEAAgCBgAIAggACAIKAAgCDAAIAg4ACAQAAAgEAgAIBAQACAQGAAgECAAIBA
++        oACAQMAAgEDgAIBgAACAYCAAgGBAAIBgYACAYIAAgGCgAIBgwACAYOAAgIAAAICAIACAgEAAgIBgAICA
++        gACAgKAAgIDAAICA4ACAoAAAgKAgAICgQACAoGAAgKCAAICgoACAoMAAgKDgAIDAAACAwCAAgMBAAIDA
++        YACAwIAAgMCgAIDAwACAwOAAgOAAAIDgIACA4EAAgOBgAIDggACA4KAAgODAAIDg4ADAAAAAwAAgAMAA
++        QADAAGAAwACAAMAAoADAAMAAwADgAMAgAADAICAAwCBAAMAgYADAIIAAwCCgAMAgwADAIOAAwEAAAMBA
++        IADAQEAAwEBgAMBAgADAQKAAwEDAAMBA4ADAYAAAwGAgAMBgQADAYGAAwGCAAMBgoADAYMAAwGDgAMCA
++        AADAgCAAwIBAAMCAYADAgIAAwICgAMCAwADAgOAAwKAAAMCgIADAoEAAwKBgAMCggADAoKAAwKDAAMCg
++        4ADAwAAAwMAgAMDAQADAwGAAwMCAAMDAoADw+/8ApKCgAICAgAAAAP8AAP8AAAD//wD/AAAA/wD/AP//
++        AAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwACAgICAgICAgICAgICAgIA4ODg
++        4ODg4ODgAGRkAABkAAICAgICAgICAgICAgICAgDg4ODg4ODg4OAAZGQAAGQAAgICAgICAgICAgICAgIA
++        4ODg4ODg4ODgAABkZAAAZAACAgICAgICAgICAgICAODg4ODg4ODg4OAAZGRkAABkAAICAgICAgICAgIC
++        AgAA4ODg4ODg4ODg4ABkZGQAAGQAAgICAgICAgICAgIAAODg4ODg4ODg4ODgAABkZAAAZAAAAgICAgIC
++        AAAAAODg4ODg4ODg4ODg4ODgAGRkAABkZAACAgIAAADg4ODg4ODg4AAAAODg4ODg4OAAZGQAAGRkAAIC
++        AgDg4ODg4ODg4AAAAAICAODg4ODg4ABkZAAAZGQAAgIAAODg4ODgAAAAAAICAgIAAODg4ODgAGRkAABk
++        ZAACAgDg4ODgAAAAAgICAgICAgIA4ODg4OAAZGQAAGRkAAAAAODg4OAAAgICAgICAgICAgAAAODg4ABk
++        ZAAAZGQA4ODg4ODg4AACAgICAgICAgICAgIA4ODgAGRkAABkZADg4ODg4ODgAAAAAgICAgICAgICAgDg
++        4OAAZGQAAGRkAODg4ODg4ODg4AAAAAACAgICAgICAODg4ABkZAAAZGQA4ODgAAAAAODg4ODg4AAAAgIC
++        AgIA4ODgAGRkAABkZADg4OAAAgIAAODg4ODg4AAAAgICAADg4OAAZGQAAGRkAODg4AACAgIA4ODg4ODg
++        4AAAAgAA4ODg4ABkZAAAZGQA4ODgAAICAgIA4ODg4ODg4OAAAODg4ODgAGRkAABkZADg4OAAAAICAgDg
++        4ODg4ODg4ODg4ODg4OAAZGQAAGRkAODg4OAAAgICAODg4ODg4ODg4ODg4ODg4AAAZAAAZGQA4ODg4AAA
++        AAAA4ODg4AAAAAAAAOAAAAAA4ABkAABkZADg4ODg4ODg4ODg4OAAAAICAgIAAAACAgDgAGQAAGRkAODg
++        4ODg4ODg4ODg4AACAgICAgICAgICAgAAZAAAZGQAAODg4ODg4ODg4ODgAAICAgICAgICAgICAgBkAABk
++        ZGQA4ODg4ODg4ODg4OAAAgICAgICAgICAgICAGQAAGRkZADg4ODg4ODg4ODg4OAAAgICAgICAgICAgIA
++        ZAAAZGQAAODg4ODg4ODg4ODg4AAAAAAAAgICAgICAgBkAABkZADg4ODg4ODg4ODg4ODg4ODg4AAAAgIC
++        AgICAGQAAGRkAODg4ODg4ODg4ODg4ODg4ODg4OAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
++        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
++        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
++        AAAAAAAAAAAAAAAAAAAAAAAA
++</value>
++  </data>
++</root>
+\ No newline at end of file
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Program.csDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Program.cs
+@@ -0,0 +1,28 @@
++﻿using System;
++using System.Collections.Generic;
++using System.Windows.Forms;
++
++namespace TripleA_Map_Resizer
++{
++    static class Program
++    {
++        /// <summary>
++        /// The main entry point for the application.
++        /// </summary>
++        [STAThread]
++        static void Main()
++        {
++            GC.Collect();
++            ExceptionViewer exViewer = null;
++            try
++            {
++                Application.EnableVisualStyles();
++                Application.SetCompatibleTextRenderingDefault(false);
++                exViewer = new ExceptionViewer();
++                Application.Run(new Main());
++            }
++            catch (Exception ex) {exViewer.ShowInformationAboutException(ex, false); }
++            GC.Collect();
++        }
++    }
++}
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Properties
+Directory.
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Properties/AssemblyInfo.csDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Properties/AssemblyInfo.cs
+@@ -0,0 +1,36 @@
++﻿using System.Reflection;
++using System.Runtime.CompilerServices;
++using System.Runtime.InteropServices;
++
++// General Information about an assembly is controlled through the following 
++// set of attributes. Change these attribute values to modify the information
++// associated with an assembly.
++[assembly: AssemblyTitle("TripleA Map Resizer")]
++[assembly: AssemblyDescription("A program that lets users resize their TripleA maps quickly and easily.")]
++[assembly: AssemblyConfiguration("")]
++[assembly: AssemblyCompany("Stingray Studios")]
++[assembly: AssemblyProduct("TripleA Map Resizer")]
++[assembly: AssemblyCopyright("Copyright © Stingray Studios 2009")]
++[assembly: AssemblyTrademark("Stingray Studios")]
++[assembly: AssemblyCulture("")]
++
++// Setting ComVisible to false makes the types in this assembly not visible 
++// to COM components.  If you need to access a type in this assembly from 
++// COM, set the ComVisible attribute to true on that type.
++[assembly: ComVisible(false)]
++
++// The following GUID is for the ID of the typelib if this project is exposed to COM
++[assembly: Guid("6621c6d2-8ad7-4e95-96ff-2a5e3dd244bf")]
++
++// Version information for an assembly consists of the following four values:
++//
++//      Major Version
++//      Minor Version 
++//      Build Number
++//      Revision
++//
++// You can specify all the values or you can default the Build and Revision Numbers 
++// by using the '*' as shown below:
++// [assembly: AssemblyVersion("1.0.*")]
++[assembly: AssemblyVersion("1.0.0.0")]
++[assembly: AssemblyFileVersion("1.0.0.0")]
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Properties/Resources.Designer.csDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Properties/Resources.Designer.cs
+@@ -0,0 +1,71 @@
++﻿//------------------------------------------------------------------------------
++// <auto-generated>
++//     This code was generated by a tool.
++//     Runtime Version:2.0.50727.3082
++//
++//     Changes to this file may cause incorrect behavior and will be lost if
++//     the code is regenerated.
++// </auto-generated>
++//------------------------------------------------------------------------------
++
++namespace TripleA_Map_Resizer.Properties
++{
++
++
++    /// <summary>
++    ///   A strongly-typed resource class, for looking up localized strings, etc.
++    /// </summary>
++    // This class was auto-generated by the StronglyTypedResourceBuilder
++    // class via a tool like ResGen or Visual Studio.
++    // To add or remove a member, edit your .ResX file then rerun ResGen
++    // with the /str option, or rebuild your VS project.
++    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "2.0.0.0")]
++    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
++    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
++    internal class Resources
++    {
++
++        private static global::System.Resources.ResourceManager resourceMan;
++
++        private static global::System.Globalization.CultureInfo resourceCulture;
++
++        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
++        internal Resources()
++        {
++        }
++
++        /// <summary>
++        ///   Returns the cached ResourceManager instance used by this class.
++        /// </summary>
++        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
++        internal static global::System.Resources.ResourceManager ResourceManager
++        {
++            get
++            {
++                if ((resourceMan == null))
++                {
++                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TripleA_Map_Resizer.Properties.Resources", typeof(Resources).Assembly);
++                    resourceMan = temp;
++                }
++                return resourceMan;
++            }
++        }
++
++        /// <summary>
++        ///   Overrides the current thread's CurrentUICulture property for all
++        ///   resource lookups using this strongly typed resource class.
++        /// </summary>
++        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
++        internal static global::System.Globalization.CultureInfo Culture
++        {
++            get
++            {
++                return resourceCulture;
++            }
++            set
++            {
++                resourceCulture = value;
++            }
++        }
++    }
++}
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Properties/Resources.resxDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Properties/Resources.resx
+@@ -0,0 +1,117 @@
++﻿<?xml version="1.0" encoding="utf-8"?>
++<root>
++  <!-- 
++    Microsoft ResX Schema 
++    
++    Version 2.0
++    
++    The primary goals of this format is to allow a simple XML format 
++    that is mostly human readable. The generation and parsing of the 
++    various data types are done through the TypeConverter classes 
++    associated with the data types.
++    
++    Example:
++    
++    ... ado.net/XML headers & schema ...
++    <resheader name="resmimetype">text/microsoft-resx</resheader>
++    <resheader name="version">2.0</resheader>
++    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
++    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
++    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
++    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
++    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
++        <value>[base64 mime encoded serialized .NET Framework object]</value>
++    </data>
++    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
++        <comment>This is a comment</comment>
++    </data>
++                
++    There are any number of "resheader" rows that contain simple 
++    name/value pairs.
++    
++    Each data row contains a name, and value. The row also contains a 
++    type or mimetype. Type corresponds to a .NET class that support 
++    text/value conversion through the TypeConverter architecture. 
++    Classes that don't support this are serialized and stored with the 
++    mimetype set.
++    
++    The mimetype is used for serialized objects, and tells the 
++    ResXResourceReader how to depersist the object. This is currently not 
++    extensible. For a given mimetype the value must be set accordingly:
++    
++    Note - application/x-microsoft.net.object.binary.base64 is the format 
++    that the ResXResourceWriter will generate, however the reader can 
++    read any of the formats listed below.
++    
++    mimetype: application/x-microsoft.net.object.binary.base64
++    value   : The object must be serialized with 
++            : System.Serialization.Formatters.Binary.BinaryFormatter
++            : and then encoded with base64 encoding.
++    
++    mimetype: application/x-microsoft.net.object.soap.base64
++    value   : The object must be serialized with 
++            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
++            : and then encoded with base64 encoding.
++
++    mimetype: application/x-microsoft.net.object.bytearray.base64
++    value   : The object must be serialized into a byte array 
++            : using a System.ComponentModel.TypeConverter
++            : and then encoded with base64 encoding.
++    -->
++  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
++    <xsd:element name="root" msdata:IsDataSet="true">
++      <xsd:complexType>
++        <xsd:choice maxOccurs="unbounded">
++          <xsd:element name="metadata">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" />
++              </xsd:sequence>
++              <xsd:attribute name="name" type="xsd:string" />
++              <xsd:attribute name="type" type="xsd:string" />
++              <xsd:attribute name="mimetype" type="xsd:string" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="assembly">
++            <xsd:complexType>
++              <xsd:attribute name="alias" type="xsd:string" />
++              <xsd:attribute name="name" type="xsd:string" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="data">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
++                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
++              </xsd:sequence>
++              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
++              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
++              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="resheader">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
++              </xsd:sequence>
++              <xsd:attribute name="name" type="xsd:string" use="required" />
++            </xsd:complexType>
++          </xsd:element>
++        </xsd:choice>
++      </xsd:complexType>
++    </xsd:element>
++  </xsd:schema>
++  <resheader name="resmimetype">
++    <value>text/microsoft-resx</value>
++  </resheader>
++  <resheader name="version">
++    <value>2.0</value>
++  </resheader>
++  <resheader name="reader">
++    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
++  </resheader>
++  <resheader name="writer">
++    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
++  </resheader>
++</root>
+\ No newline at end of file
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Properties/Settings.Designer.csDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Properties/Settings.Designer.cs
+@@ -0,0 +1,30 @@
++﻿//------------------------------------------------------------------------------
++// <auto-generated>
++//     This code was generated by a tool.
++//     Runtime Version:2.0.50727.3082
++//
++//     Changes to this file may cause incorrect behavior and will be lost if
++//     the code is regenerated.
++// </auto-generated>
++//------------------------------------------------------------------------------
++
++namespace TripleA_Map_Resizer.Properties
++{
++
++
++    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
++    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "9.0.0.0")]
++    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
++    {
++
++        private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
++
++        public static Settings Default
++        {
++            get
++            {
++                return defaultInstance;
++            }
++        }
++    }
++}
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Properties/Settings.settingsDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/Properties/Settings.settings
+@@ -0,0 +1,7 @@
++﻿<?xml version='1.0' encoding='utf-8'?>
++<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
++  <Profiles>
++    <Profile Name="(Default)" />
++  </Profiles>
++  <Settings />
++</SettingsFile>
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/TripleA Map Creator 5.ico
+Binary file was added.
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/TripleA Map Resizer.csprojDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/TripleA Map Resizer.csproj
+@@ -0,0 +1,156 @@
++﻿<?xml version="1.0" encoding="utf-8"?>
++<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
++  <PropertyGroup>
++    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
++    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
++    <ProductVersion>9.0.30729</ProductVersion>
++    <SchemaVersion>2.0</SchemaVersion>
++    <ProjectGuid>{477468E0-61B7-47C1-98A4-59FE6EA53E5A}</ProjectGuid>
++    <OutputType>WinExe</OutputType>
++    <AppDesignerFolder>Properties</AppDesignerFolder>
++    <RootNamespace>TripleA_Map_Resizer</RootNamespace>
++    <AssemblyName>TripleA Map Resizer</AssemblyName>
++    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
++    <FileAlignment>512</FileAlignment>
++    <TargetFrameworkSubset>
++    </TargetFrameworkSubset>
++    <ApplicationIcon>TripleA Map Creator 5.ico</ApplicationIcon>
++    <PublishUrl>publish\</PublishUrl>
++    <Install>true</Install>
++    <InstallFrom>Disk</InstallFrom>
++    <UpdateEnabled>false</UpdateEnabled>
++    <UpdateMode>Foreground</UpdateMode>
++    <UpdateInterval>7</UpdateInterval>
++    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
++    <UpdatePeriodically>false</UpdatePeriodically>
++    <UpdateRequired>false</UpdateRequired>
++    <MapFileExtensions>true</MapFileExtensions>
++    <ProductName>TripleA Map Resizer</ProductName>
++    <PublisherName>Stingray Studios</PublisherName>
++    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
++    <ApplicationRevision>0</ApplicationRevision>
++    <ApplicationVersion>1.0.0.0</ApplicationVersion>
++    <IsWebBootstrapper>false</IsWebBootstrapper>
++    <UseApplicationTrust>false</UseApplicationTrust>
++    <BootstrapperEnabled>true</BootstrapperEnabled>
++  </PropertyGroup>
++  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
++    <DebugSymbols>true</DebugSymbols>
++    <DebugType>full</DebugType>
++    <Optimize>false</Optimize>
++    <OutputPath>bin\Debug\</OutputPath>
++    <DefineConstants>DEBUG;TRACE</DefineConstants>
++    <ErrorReport>prompt</ErrorReport>
++    <WarningLevel>4</WarningLevel>
++  </PropertyGroup>
++  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
++    <DebugType>pdbonly</DebugType>
++    <Optimize>true</Optimize>
++    <OutputPath>bin\Release\</OutputPath>
++    <DefineConstants>TRACE</DefineConstants>
++    <ErrorReport>prompt</ErrorReport>
++    <WarningLevel>4</WarningLevel>
++  </PropertyGroup>
++  <ItemGroup>
++    <Reference Include="System" />
++    <Reference Include="System.Xml.Linq">
++      <RequiredTargetFramework>3.5</RequiredTargetFramework>
++    </Reference>
++    <Reference Include="System.Data.DataSetExtensions">
++      <RequiredTargetFramework>3.5</RequiredTargetFramework>
++    </Reference>
++    <Reference Include="System.Data" />
++    <Reference Include="System.Deployment" />
++    <Reference Include="System.Drawing" />
++    <Reference Include="System.Windows.Forms" />
++    <Reference Include="System.Xml" />
++  </ItemGroup>
++  <ItemGroup>
++    <Compile Include="ExceptionViewer.cs">
++      <SubType>Form</SubType>
++    </Compile>
++    <Compile Include="ExceptionViewer.Designer.cs">
++      <DependentUpon>ExceptionViewer.cs</DependentUpon>
++    </Compile>
++    <Compile Include="Main.cs">
++      <SubType>Form</SubType>
++    </Compile>
++    <Compile Include="Main.Designer.cs">
++      <DependentUpon>Main.cs</DependentUpon>
++    </Compile>
++    <Compile Include="MapPreviewWindow.cs">
++      <SubType>Form</SubType>
++    </Compile>
++    <Compile Include="MapPreviewWindow.Designer.cs">
++      <DependentUpon>MapPreviewWindow.cs</DependentUpon>
++    </Compile>
++    <Compile Include="Program.cs" />
++    <Compile Include="Properties\AssemblyInfo.cs" />
++    <EmbeddedResource Include="ExceptionViewer.resx">
++      <DependentUpon>ExceptionViewer.cs</DependentUpon>
++    </EmbeddedResource>
++    <EmbeddedResource Include="Main.resx">
++      <DependentUpon>Main.cs</DependentUpon>
++    </EmbeddedResource>
++    <EmbeddedResource Include="MapPreviewWindow.resx">
++      <DependentUpon>MapPreviewWindow.cs</DependentUpon>
++    </EmbeddedResource>
++    <EmbeddedResource Include="Properties\Resources.resx">
++      <Generator>ResXFileCodeGenerator</Generator>
++      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
++      <SubType>Designer</SubType>
++    </EmbeddedResource>
++    <Compile Include="Properties\Resources.Designer.cs">
++      <AutoGen>True</AutoGen>
++      <DependentUpon>Resources.resx</DependentUpon>
++    </Compile>
++    <None Include="app.config" />
++    <None Include="Properties\Settings.settings">
++      <Generator>SettingsSingleFileGenerator</Generator>
++      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
++    </None>
++    <Compile Include="Properties\Settings.Designer.cs">
++      <AutoGen>True</AutoGen>
++      <DependentUpon>Settings.settings</DependentUpon>
++      <DesignTimeSharedInput>True</DesignTimeSharedInput>
++    </Compile>
++  </ItemGroup>
++  <ItemGroup>
++    <Content Include="TripleA Map Creator 5.ico" />
++  </ItemGroup>
++  <ItemGroup>
++    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
++      <Visible>False</Visible>
++      <ProductName>.NET Framework Client Profile</ProductName>
++      <Install>false</Install>
++    </BootstrapperPackage>
++    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
++      <Visible>False</Visible>
++      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
++      <Install>true</Install>
++    </BootstrapperPackage>
++    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
++      <Visible>False</Visible>
++      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
++      <Install>false</Install>
++    </BootstrapperPackage>
++    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
++      <Visible>False</Visible>
++      <ProductName>.NET Framework 3.5</ProductName>
++      <Install>false</Install>
++    </BootstrapperPackage>
++    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
++      <Visible>False</Visible>
++      <ProductName>.NET Framework 3.5 SP1</ProductName>
++      <Install>false</Install>
++    </BootstrapperPackage>
++  </ItemGroup>
++  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
++  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
++       Other similar extension points exist, see Microsoft.Common.targets.
++  <Target Name="BeforeBuild">
++  </Target>
++  <Target Name="AfterBuild">
++  </Target>
++  -->
++</Project>
+\ No newline at end of file
+/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/TripleA Map Resizer.csproj.userDiffSwitch to side-by-side view
+--- a
++++ b/triplea_old_map_creator/source/TripleA Map Resizer/TripleA Map Resizer/TripleA Map Resizer.csproj.user
+@@ -0,0 +1,17 @@
++﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
++  <PropertyGroup>
++    <PublishUrlHistory>publish\</PublishUrlHistory>
++    <InstallUrlHistory>
++    </InstallUrlHistory>
++    <SupportUrlHistory>
++    </SupportUrlHistory>
++    <UpdateUrlHistory>
++    </UpdateUrlHistory>
++    <BootstrapperUrlHistory>
++    </BootstrapperUrlHistory>
++    <ErrorReportUrlHistory>
++    </ErrorReportUrlHistory>
++    <FallbackCulture>en-US</FallbackCulture>
++    <VerifyUploadedFiles>false</VerifyUploadedFiles>
++  </PropertyGroup>
++</Project>
+\ No newline at end of file
+1 2 3 > >> (Page 1 of 3)
+SourceForge
+Create a Project
+Open Source Software
+Business Software
+Top Downloaded Projects
+Company
+About
+Team
+SourceForge Headquarters
+225 Broadway Suite 1600
+San Diego, CA 92101
++1 (858) 454-5900
+   
+Resources
+Support
+Site Documentation
+Site Status
+SourceForge logo
